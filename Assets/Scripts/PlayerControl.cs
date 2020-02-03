@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     public RawImage img_1, img_2, img_3;
 
     private float rotationSpeed = 0.3f; 
-    private bool isGrounded = true;
+    public bool isGrounded = true;
     private int itemCount;
     private bool isAlive = true;
 
@@ -56,7 +56,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter() {
+    void OnCollisionStay() {
         isGrounded = true;
     }
 
