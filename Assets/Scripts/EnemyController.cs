@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
     }
 
-    void OnCollisionEnter(Collision c){
+    void OnCollisionEnter(Collision other){
         collidedTarget = true;
         if(defaultTarget == target1){
             defaultTarget = target2;
@@ -57,5 +57,4 @@ public class EnemyController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, target.position, distance);
         }
     }
-
 }
