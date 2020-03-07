@@ -9,24 +9,25 @@ public class PlayerControl : MonoBehaviour
     public float jumpHeight;
     public float moveSpeed;
     public float rotationDelta;
-    public Text resultText;
-    public RawImage img_1, img_2, img_3;
+    //public Text resultText;
+    //public RawImage img_1, img_2, img_3;
 
     private float rotationSpeed = 0.3f; 
     public bool isGrounded = true;
-    private int itemCount;
+    //private int itemCount;
     private bool isAlive = true;
 
     void Start() {
         rb = this.GetComponent(typeof(Rigidbody)) as Rigidbody;
-        resultText.text = "";
-        itemCount = 0;
+        //resultText.text = "";
+        //itemCount = 0;
+
         isAlive = true;
 
         // Not render item_images
-        img_1.enabled = false;
-        img_2.enabled = false;
-        img_3.enabled = false;
+        // img_1.enabled = false;
+        // img_2.enabled = false;
+        // img_3.enabled = false;
     }
 
     void Update()
@@ -64,61 +65,61 @@ public class PlayerControl : MonoBehaviour
         isGrounded = false;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        // Trigger item_1
-        if (other.gameObject.CompareTag("Item_1"))
-        {
-            // Item_image
-            img_1.enabled = true;
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     // Trigger item_1
+    //     if (other.gameObject.CompareTag("Item_1"))
+    //     {
+    //         // Item_image
+    //         img_1.enabled = true;
 
-            // Item object
-            other.gameObject.SetActive(false);
+    //         // Item object
+    //         other.gameObject.SetActive(false);
             
-            itemCount++;
-            setCountText();
-        }
+    //         itemCount++;
+    //         setCountText();
+    //     }
 
-        // Trigger item_2
-        if (other.gameObject.CompareTag("Item_2"))
-        {
-            // Item_image
-            img_2.enabled = true;
+    //     // Trigger item_2
+    //     if (other.gameObject.CompareTag("Item_2"))
+    //     {
+    //         // Item_image
+    //         img_2.enabled = true;
 
-            // Item object
-            other.gameObject.SetActive(false);
+    //         // Item object
+    //         other.gameObject.SetActive(false);
             
-            itemCount++;
-            setCountText();
-        }
+    //         itemCount++;
+    //         setCountText();
+    //     }
 
-        // Trigger item_3
-        if (other.gameObject.CompareTag("Item_3"))
-        {
-            // Item_image
-            img_3.enabled = true;
+    //     // Trigger item_3
+    //     if (other.gameObject.CompareTag("Item_3"))
+    //     {
+    //         // Item_image
+    //         img_3.enabled = true;
 
-            // Item object
-            other.gameObject.SetActive(false);
+    //         // Item object
+    //         other.gameObject.SetActive(false);
             
-            itemCount++;
-            setCountText();
-        }
+    //         itemCount++;
+    //         setCountText();
+    //     }
 
-        // Trigger Enemy
-        if (other.gameObject.CompareTag("Enemy")) {
-            isAlive = false;
-            resultText.text = "YOU LOSE!";
-        }
-    }
+    //     // Trigger Enemy
+    //     if (other.gameObject.CompareTag("Enemy")) {
+    //         isAlive = false;
+    //         resultText.text = "YOU LOSE!";
+    //     }
+    // }
 
-    void setCountText()
-    {
-        // countText.text = "Count: " + itemCount.ToString();
-        if (itemCount >= 3)
-        {
-            resultText.text = "You Win!";
-        }
-    }
+    // void setCountText()
+    // {
+    //     // countText.text = "Count: " + itemCount.ToString();
+    //     if (itemCount >= 3)
+    //     {
+    //         resultText.text = "You Win!";
+    //     }
+    // }
 
 }
