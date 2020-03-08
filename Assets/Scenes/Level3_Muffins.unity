@@ -1740,7 +1740,7 @@ GameObject:
   - component: {fileID: 709150143}
   - component: {fileID: 709150142}
   m_Layer: 5
-  m_Name: Eggs Text
+  m_Name: Egg Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4109,6 +4109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbd2b6da7bbe5043ad9dfecd3424625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
   hearts: []
   halfHeart: {fileID: 21300000, guid: f45839e859853204db0240a4bbe34266, type: 3}
   fullHeart: {fileID: 21300000, guid: b2af3b811e2b0c64bb62107f22cba8d1, type: 3}
