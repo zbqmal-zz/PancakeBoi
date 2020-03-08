@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    private float health = 3;
+    public float health = 3;
     private int heartsTotal = 3;
     public Image[] hearts;
     public Sprite halfHeart;
@@ -28,6 +28,12 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+
+        if (health < 0f)
+         {
+             BasicEnemy.isPlayerAlive = false;
+            //  Destroy (gameObject);
+         }
     }
 
 }
