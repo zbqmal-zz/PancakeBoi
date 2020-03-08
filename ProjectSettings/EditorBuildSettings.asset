@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu_Scene.unity
+    guid: a7820c95585eb4398ac5606a0997a383
+  - enabled: 1
+    path: Assets/Scenes/Level_1_Scene.unity
+    guid: a4e64b74176d44434a3ca5ef2e61c37b
+  - enabled: 1
+    path: Assets/Scenes/Level2_French_Toast.unity
+    guid: 1bba651752e237540abd6aace676d671
+  - enabled: 1
+    path: Assets/Scenes/Level3_Muffins.unity
+    guid: 2ff3bd3daab6f6c4ba0f8929fe0a8748
+  - enabled: 1
     path: Assets/Scenes/Level_4_Scene.unity
     guid: e10a275fa28b14a429461ca6c0cb4001
   m_configObjects: {}
