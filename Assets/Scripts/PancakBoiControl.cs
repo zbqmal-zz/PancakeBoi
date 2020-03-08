@@ -35,7 +35,7 @@ public class PancakBoiControl : MonoBehaviour
     {   
         anim.SetBool("Running", false);
         // Vector3 raycastOrigin = this.transform.TransformPoint
-        isGrounded = Physics.SphereCast(new Ray(this.transform.TransformPoint(cc.center), Vector3.down), 0.38f, 0.5f);
+        isGrounded = Physics.SphereCast(new Ray(this.transform.TransformPoint(cc.center), Vector3.down), 0.38f, 0.53f);
         bool preGrounded = Physics.SphereCast(new Ray(this.transform.TransformPoint(cc.center), Vector3.down), 0.38f, 1.5f);
 
         Vector2 facing = Vector2.zero;
