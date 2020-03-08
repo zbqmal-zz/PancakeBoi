@@ -9,11 +9,12 @@ public class CameraController : MonoBehaviour
     public float cameraLowest = 0f;
     public float cameraHighest = 1f;
     public float rotationDelta;
+    public float heightOffset;
     private Vector3 offset;
     private float radius;
 
     void Start() {
-        offset = this.transform.position - target.transform.position;
+        offset = this.transform.position - target.transform.position + Vector3.up*heightOffset;
         // radius = (new Vector3(offset.x, 0f, offset.z)).magnitude;
         radius = offset.magnitude;
     }
@@ -47,10 +48,10 @@ public class CameraController : MonoBehaviour
 
         // offset.x = newX;
         // offset.z = newZ;
-        this.transform.position = target.transform.position + offset;
+        this.transform.position = target.transform.position + heightOffset*Vector3.up + offset;
         // this.transform.position = target.transform.TransformPoint(offset);
     
-        this.transform.LookAt(target.transform.position);
+        this.transform.LookAt(target.transform.position + heightOffset*Vector3.up);
     }
 
     
