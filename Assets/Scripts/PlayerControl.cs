@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
         rb = this.GetComponent(typeof(Rigidbody)) as Rigidbody;
         //resultText.text = "";
         //itemCount = 0;
+
         isAlive = true;
 
         // Not render item_images
