@@ -17,7 +17,7 @@ public class CrackerPlatform : MonoBehaviour
         animator.enabled = false;
         originalPos = this.transform.position;
     }
-    void OnCollisionEnter(Collision collision){
+    void OnTriggerEnter(Collider collision){
         if (collision.gameObject.tag == "Player"){
             animator.enabled = true;
             StartCoroutine(Fall());
