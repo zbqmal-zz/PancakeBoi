@@ -10,9 +10,10 @@ public class Button_Animation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) {
             buttonController.SetBool("isPressed", true);
             wallController.SetBool("isOpened", true);
             isPressed = true;
+        }
     }
 }
