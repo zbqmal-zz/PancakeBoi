@@ -3838,7 +3838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectableTotal: 7
+  levelNumber: 2
 --- !u!114 &725526115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6222,6 +6222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pan
       objectReference: {fileID: 0}
+    - target: {fileID: 2218899529550276862, guid: d72fb720f37e73949bd8872f97119d2d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pan
+      objectReference: {fileID: 0}
     - target: {fileID: 2218899529550276863, guid: d72fb720f37e73949bd8872f97119d2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7746,6 +7751,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058601769558941194, guid: f0bab42a383dbcf42b11301d82cebb4d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058601769558941194, guid: f0bab42a383dbcf42b11301d82cebb4d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058601769558941194, guid: f0bab42a383dbcf42b11301d82cebb4d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 8794221635270821673, guid: f0bab42a383dbcf42b11301d82cebb4d,
         type: 3}

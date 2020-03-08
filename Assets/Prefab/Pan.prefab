@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2218899529550276863}
   m_Layer: 0
   m_Name: Pan
-  m_TagString: Untagged
+  m_TagString: Pan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2218899530841976419}
   - component: {fileID: 2218899530841976418}
-  - component: {fileID: 2218899530841976417}
   m_Layer: 0
   m_Name: Cooking Pan
   m_TagString: Untagged
@@ -169,20 +168,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2218899530841976417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8697007970321492337, guid: f98dff914c6a64849a3cf170c9ad2b53,
-    type: 3}
-  m_PrefabInstance: {fileID: 2218899529702131328}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2218899530841976416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2ec9d97c775f841b3fa5d5171dab3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  appear: 0
 --- !u!1 &2218899530887398496
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,5 +278,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cooking Pan
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f98dff914c6a64849a3cf170c9ad2b53, type: 3}
