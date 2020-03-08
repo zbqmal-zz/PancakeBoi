@@ -17,7 +17,7 @@ public class PancakBoiControl : MonoBehaviour
     private bool isGrounded = true;
     private bool midJump = false;
     private bool falling  = false;
-    private Vector3 vel = Vector3.zero;
+    public Vector3 vel = Vector3.zero;
 
 
     void Start()
@@ -35,7 +35,7 @@ public class PancakBoiControl : MonoBehaviour
     {   
         anim.SetBool("Running", false);
         // Vector3 raycastOrigin = this.transform.TransformPoint
-        isGrounded = Physics.SphereCast(new Ray(this.transform.TransformPoint(cc.center), Vector3.down), 0.38f, 0.52f);
+        isGrounded = Physics.SphereCast(new Ray(this.transform.TransformPoint(cc.center), Vector3.down), 0.38f, 0.5f);
         bool preGrounded = Physics.SphereCast(new Ray(this.transform.TransformPoint(cc.center), Vector3.down), 0.38f, 1.5f);
 
         Vector2 facing = Vector2.zero;
@@ -71,6 +71,7 @@ public class PancakBoiControl : MonoBehaviour
         } else {
             falling = true;
             anim.SetBool("falling", true);
+            anim.SetBool("isGrounded", false);
         }
         if (midJump && !falling) {
             anim.SetBool("isGrounded", false);
@@ -81,7 +82,7 @@ public class PancakBoiControl : MonoBehaviour
         //     anim.SetBool("falling", true);
         // }
 
-        if (Input.GetButtonDown("Jump") && isGrounded) {
+        if (Input.GetButton("Jump") && isGrounded && !midJump) {
             vel.y += jumpHeight;
             midJump = true;
             anim.SetBool("midJump", true);
@@ -96,6 +97,8 @@ public class PancakBoiControl : MonoBehaviour
             vel.x = 0f;
             vel.z = 0f;
         }
+
+        anim.SetFloat("fallSpeed", vel.y);
         
 
 

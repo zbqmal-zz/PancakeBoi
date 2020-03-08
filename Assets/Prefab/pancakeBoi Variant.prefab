@@ -115,7 +115,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 84e8d298ff1c3c349ad1477f117359b4,
         type: 3}
       propertyPath: m_Name
-      value: pancakeBoi
+      value: pancakeBoi Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 84e8d298ff1c3c349ad1477f117359b4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84e8d298ff1c3c349ad1477f117359b4, type: 3}

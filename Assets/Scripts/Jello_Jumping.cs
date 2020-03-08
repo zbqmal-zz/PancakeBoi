@@ -27,7 +27,10 @@ public class Jello_Jumping : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) {
             jelloController.SetBool("isJump", false);
+            PancakBoiControl controller = other.GetComponent(typeof(PancakBoiControl)) as PancakBoiControl;
+            controller.vel.y = 15f;
+        }
     }
 }

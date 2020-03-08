@@ -7,11 +7,14 @@ public class IngredientBehavior : MonoBehaviour
     // Start is called before the first frame update
     private Animator animator;
     private AudioSource audio;
+    private Collider collider;
     public Transform player;
     void Start()
     {
         animator = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+        collider = GetComponent<Collider>();
+        collider.isTrigger = true;
     }
 
     // Update is called once per frame
@@ -35,6 +38,13 @@ public class IngredientBehavior : MonoBehaviour
             StartCoroutine(Deactivate());
         }
 
+    }
+    void OnTriggerEnter(Collider collision) {
+        Debug.Log("collding");
+        if (collision.gameObject.CompareTag("Player")) {
+            audio.Play();
+            StartCoroutine(Deactivate());
+        }
     }
     IEnumerator Deactivate(){
         yield return new WaitForSeconds(0.2f);
