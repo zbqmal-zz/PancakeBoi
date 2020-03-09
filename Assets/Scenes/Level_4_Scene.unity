@@ -12145,19 +12145,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1996900271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2048199500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048199499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelNumber: 4
 --- !u!4 &2048199503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5219688041747093909, guid: b6b2785cc46291e42990174ef4394cc1,
