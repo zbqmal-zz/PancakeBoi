@@ -13,6 +13,7 @@ TagManager:
   - Item_2_img
   - Item_3_img
   - Pan
+  - Pan Trigger
   layers:
   - Default
   - TransparentFX
