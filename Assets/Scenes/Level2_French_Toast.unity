@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44935519, g: 0.4994282, b: 0.5757016, a: 1}
+  m_IndirectSpecularColor: {r: 0.44935542, g: 0.49942863, b: 0.57570225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7559,6 +7559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectableCount: 0
   levelNumber: 2
 --- !u!114 &725526115
 MonoBehaviour:
@@ -7770,35 +7771,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1565838769}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &757310950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757310949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelNumber: 2
---- !u!114 &757310951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757310949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdbd2b6da7bbe5043ad9dfecd3424625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  hearts: []
-  halfHeart: {fileID: 21300000, guid: b2af3b811e2b0c64bb62107f22cba8d1, type: 3}
-  fullHeart: {fileID: 21300000, guid: f45839e859853204db0240a4bbe34266, type: 3}
 --- !u!1 &757438553
 GameObject:
   m_ObjectHideFlags: 0
@@ -14510,10 +14482,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9171315756768511925, guid: b6b2785cc46291e42990174ef4394cc1,
+        type: 3}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 5624608673488204813}
     - target: {fileID: 637510286, guid: b6b2785cc46291e42990174ef4394cc1, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 486598425}
+    - target: {fileID: 348873677913702597, guid: b6b2785cc46291e42990174ef4394cc1,
+        type: 3}
+      propertyPath: levelNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5219688041747093909, guid: b6b2785cc46291e42990174ef4394cc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19092,6 +19074,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec1018566b171b94f9c3d99daf0059d5, type: 3}
+--- !u!1 &5624608673488204813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5624608674010320584, guid: ec1018566b171b94f9c3d99daf0059d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5624608673488204812}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8960975033440125756
 PrefabInstance:
   m_ObjectHideFlags: 0

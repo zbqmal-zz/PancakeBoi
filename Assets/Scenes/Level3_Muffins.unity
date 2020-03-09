@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44996262, g: 0.50002086, b: 0.57553416, a: 1}
+  m_IndirectSpecularColor: {r: 0.44996297, g: 0.5000211, b: 0.575535, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9894,6 +9894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectableCount: 0
   levelNumber: 3
 --- !u!1001 &1780415672
 PrefabInstance:
@@ -10365,10 +10366,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9171315756768511925, guid: b6b2785cc46291e42990174ef4394cc1,
+        type: 3}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 2857469748422013884}
     - target: {fileID: 637510286, guid: b6b2785cc46291e42990174ef4394cc1, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 1512300088}
+    - target: {fileID: 348873677913702597, guid: b6b2785cc46291e42990174ef4394cc1,
+        type: 3}
+      propertyPath: levelNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5219688041747093909, guid: b6b2785cc46291e42990174ef4394cc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10437,35 +10448,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1913965454}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1913965456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913965455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelNumber: 3
---- !u!114 &1913965457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913965455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdbd2b6da7bbe5043ad9dfecd3424625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  hearts: []
-  halfHeart: {fileID: 21300000, guid: b2af3b811e2b0c64bb62107f22cba8d1, type: 3}
-  fullHeart: {fileID: 21300000, guid: f45839e859853204db0240a4bbe34266, type: 3}
 --- !u!4 &1913965458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5219688041747093909, guid: b6b2785cc46291e42990174ef4394cc1,

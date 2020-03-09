@@ -17,8 +17,11 @@ public class PancakBoiControl : MonoBehaviour
     public bool isGrounded = true;
     private bool midJump = false;
     private bool falling  = false;
+    private float safetyTime = 0f;
+    private bool safetyKeep = false;
     public Vector3 vel = Vector3.zero;
     public Vector3 pos = Vector3.zero;
+    public bool resetPos = false;
 
 
     void Start()
@@ -107,13 +110,21 @@ public class PancakBoiControl : MonoBehaviour
     }
 
     void LateUpdate() {
-            if(pos.x != 0 || pos.y != 0 || pos.z != 0) {
-                cc.Move(this.transform.position - pos);
+        if (resetPos) {
+            this.transform.position = pos;
+            vel = Vector3.zero;
+            if (!safetyKeep) {
+                safetyTime = Time.time + 0.2f;
+                safetyKeep = true;
+            } else if (Time.time > safetyTime) {
+                resetPos = false;
+                safetyKeep = false;
                 pos = Vector3.zero;
-                vel = Vector3.zero;
-            } else {
-                cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
             }
+        } else {
+            cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
+        }
+
         // if (falling || midJump)
         //     cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
         // else
