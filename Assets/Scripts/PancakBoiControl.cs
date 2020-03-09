@@ -14,10 +14,11 @@ public class PancakBoiControl : MonoBehaviour
     public float fallSpeedMultiplier;
 
     private float oldRot = 0f;
-    private bool isGrounded = true;
+    public bool isGrounded = true;
     private bool midJump = false;
     private bool falling  = false;
     public Vector3 vel = Vector3.zero;
+    public Vector3 pos = Vector3.zero;
 
 
     void Start()
@@ -106,7 +107,13 @@ public class PancakBoiControl : MonoBehaviour
     }
 
     void LateUpdate() {
-            cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
+            if(pos.x != 0 || pos.y != 0 || pos.z != 0) {
+                cc.Move(this.transform.position - pos);
+                pos = Vector3.zero;
+                vel = Vector3.zero;
+            } else {
+                cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
+            }
         // if (falling || midJump)
         //     cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
         // else
