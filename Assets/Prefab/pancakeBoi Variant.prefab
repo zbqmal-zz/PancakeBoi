@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &-872422622434387253
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!143 &637510285
 CharacterController:
   m_ObjectHideFlags: 0
@@ -18,6 +34,35 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.85, z: 0.05}
+--- !u!136 &4199771537678308430
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.45
+  m_Height: 1.6
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.85, z: 0.05}
+--- !u!114 &-9171315756768511925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7296af77b7f114b96f8ee65e3d12b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
+  health: 3
+  invulnPeriod: 2
 --- !u!114 &637510286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,6 +80,7 @@ MonoBehaviour:
   midAirVelocity: 4
   jumpFloatness: 1.2
   fallSpeedMultiplier: 1.2
+  vel: {x: 0, y: 0, z: 0}
 --- !u!1001 &939768329032774287
 PrefabInstance:
   m_ObjectHideFlags: 0
