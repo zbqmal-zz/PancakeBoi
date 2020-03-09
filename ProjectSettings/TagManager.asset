@@ -12,6 +12,8 @@ TagManager:
   - Item_1_img
   - Item_2_img
   - Item_3_img
+  - Pan
+  - Pan Trigger
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Platform
+  - Wall
   - 
   - 
   - 
