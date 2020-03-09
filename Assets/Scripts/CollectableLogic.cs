@@ -10,6 +10,7 @@ public class CollectableLogic : MonoBehaviour
     private int collectableTotal;
     public int levelNumber;
     private GameObject pan;
+    private GameObject[] pantriggers;
     private Text sugarText;
     private Text vanillaText;
     private Text nutmegText;
@@ -36,8 +37,14 @@ public class CollectableLogic : MonoBehaviour
     {
         collectableCount = 0;
         pan = GameObject.FindGameObjectWithTag("Pan");
+        pantriggers = GameObject.FindGameObjectsWithTag("Pan Trigger");
         if(pan != null){
             pan.SetActive(false);
+        }
+        if(pantriggers.Length > 0){
+            for (int i = 0; i < pantriggers.Length; i++){
+                pantriggers[i].SetActive(false);
+            }
         }
 
         if(levelNumber == 0 || levelNumber == null){
@@ -191,6 +198,9 @@ public class CollectableLogic : MonoBehaviour
         if(collectableCount == collectableTotal){
             Debug.Log(collectableCount);
             pan.SetActive(true);
+            for (int i = 0; i<pantriggers.Length; i++){
+                pantriggers[i].SetActive(true);
+            }
         }
     }
 }
