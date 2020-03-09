@@ -31,14 +31,6 @@ public class IngredientBehavior : MonoBehaviour
             }
         }
     }
-    void OnCollisionEnter(Collision collision){
-        Debug.Log("colliding");
-        if(collision.collider.gameObject.CompareTag("Player")){
-            audio.Play();
-            StartCoroutine(Deactivate());
-        }
-
-    }
     void OnTriggerEnter(Collider collision) {
         Debug.Log("collding");
         if (collision.gameObject.CompareTag("Player")) {

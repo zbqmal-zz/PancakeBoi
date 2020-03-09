@@ -9,6 +9,7 @@ public class CollectableLogic : MonoBehaviour
     private int collectableCount;
     private int collectableTotal;
     public int levelNumber;
+    public List<Text> ingredientsCollected;
     private GameObject pan;
     private GameObject[] pantriggers;
     private Text sugarText;
@@ -50,6 +51,7 @@ public class CollectableLogic : MonoBehaviour
         if(levelNumber == 0 || levelNumber == null){
             Debug.Log("Please set level number");
         }
+        ingredientsCollected = new List<Text>();
         switch (levelNumber){
             case 1:
                 milkText = GameObject.Find("Milk Text").GetComponent<Text>();
@@ -105,102 +107,135 @@ public class CollectableLogic : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("collsion entered");
+        Debug.Log("triggered");
         switch(collider.gameObject.name){
             case "Sugar Jar":
                 Debug.Log("saw it was sugar");
                 collectableCount++;
                 sugarText.color = Color.black;
+                AddCollectedIngredient(sugarText);
                 break;
             case "Vanilla Extract Bottle":
                 collectableCount++;
                 vanillaText.color = Color.black;
+                AddCollectedIngredient(vanillaText);
                 break;
             case "Nutmeg Bottle":
                 collectableCount++;
                 nutmegText.color = Color.black;
+                AddCollectedIngredient(nutmegText);
                 break;
             case "Cinnamon Bottle":
                 collectableCount++;
                 cinnamonText.color = Color.black;
+                AddCollectedIngredient(cinnamonText);
                 break;
             case "Milk Carton":
                 collectableCount++;
                 milkText.color = Color.black;
+                AddCollectedIngredient(milkText);
                 break;
             case "Egg Body":
                 collectableCount++;
                 eggText.color = Color.black;
+                AddCollectedIngredient(eggText);
                 break;
             case "Bread Body":
                 collectableCount++;
                 breadText.color = Color.black;
+                AddCollectedIngredient(breadText);
                 break;
             case "Flour Jar":
                 collectableCount++;
                 flourText.color = Color.black;
+                AddCollectedIngredient(flourText);
                 break;
             case "Baking Soda Box":
                 collectableCount++;
                 bakingSodaText.color = Color.black;
+                AddCollectedIngredient(bakingSodaText);
                 break;
             case "Blueberry Bundle":
                 collectableCount++;
                 blueberryText.color = Color.black;
+                AddCollectedIngredient(blueberryText);
                 break;
             case "Salt Shaker Obj":
                 collectableCount++;
                 saltText.color = Color.black;
+                AddCollectedIngredient(saltText);
                 break;
             case "Pepper Shaker Obj":
                 collectableCount++;
                 pepperText.color = Color.black;
+                AddCollectedIngredient(pepperText);
                 break;
             case "Cheese Body":
                 collectableCount++;
                 cheeseText.color = Color.black;
+                AddCollectedIngredient(cheeseText);
                 break;
             case "Butter Tilted":
                 collectableCount++;
                 butterText.color = Color.black;
+                AddCollectedIngredient(butterText);
                 break;
             case "Tortilla Tilted":
                 collectableCount++;
                 tortillaText.color = Color.black;
+                AddCollectedIngredient(tortillaText);
                 break;
             case "Bean Group":
                 collectableCount++;
                 beansText.color = Color.black;
+                AddCollectedIngredient(beansText);
                 break;
             case "Onion Body":
                 collectableCount++;
                 onionText.color = Color.black;
+                AddCollectedIngredient(onionText);
                 break;
             case "Cilantro Leaves":
                 collectableCount++;
                 cilantroText.color = Color.black;
+                AddCollectedIngredient(cilantroText);
                 break;
             case "Jalapeno Body":
                 collectableCount++;
                 jalapenoText.color = Color.black;
+                AddCollectedIngredient(jalapenoText);
                 break;
             case "Hot Sauce Body":
                 collectableCount++;
                 hotSauceText.color = Color.black;
+                AddCollectedIngredient(hotSauceText);
                 break;
             case "ham body":
                 collectableCount++;
                 hamText.color = Color.black;
+                AddCollectedIngredient(hamText);
                 break;
         }
     }
     void Update(){
-        if(collectableCount == collectableTotal){
-            Debug.Log(collectableCount);
+        Debug.Log(ingredientsCollected.Count);
+        if(ingredientsCollected.Count == collectableTotal){
+            //Debug.Log(collectableCount);
             pan.SetActive(true);
             for (int i = 0; i<pantriggers.Length; i++){
                 pantriggers[i].SetActive(true);
             }
+        }
+    }
+    void AddCollectedIngredient(Text ingredient){
+        bool dup = false;
+        for (int i = 0; i < ingredientsCollected.Count; i++){
+            if(ingredientsCollected[i] == ingredient){
+                dup = true;
+            }
+        }
+        if(!dup){
+            ingredientsCollected.Add(ingredient);
         }
     }
 }
