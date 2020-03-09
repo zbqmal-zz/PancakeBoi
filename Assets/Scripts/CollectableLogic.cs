@@ -95,10 +95,10 @@ public class CollectableLogic : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
         Debug.Log("collsion entered");
-        switch(collision.collider.gameObject.name){
+        switch(collider.gameObject.name){
             case "Sugar Jar":
                 Debug.Log("saw it was sugar");
                 collectableCount++;
