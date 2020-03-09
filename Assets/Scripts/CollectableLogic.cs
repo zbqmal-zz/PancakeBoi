@@ -218,7 +218,7 @@ public class CollectableLogic : MonoBehaviour
         }
     }
     void Update(){
-        Debug.Log(ingredientsCollected.Count);
+        //Debug.Log(ingredientsCollected.Count);
         if(ingredientsCollected.Count == collectableTotal){
             //Debug.Log(collectableCount);
             pan.SetActive(true);
