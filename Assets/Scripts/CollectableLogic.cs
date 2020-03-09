@@ -64,7 +64,8 @@ public class CollectableLogic : MonoBehaviour
                 break;
             case 3:
                 flourText = GameObject.Find("Flour Text").GetComponent<Text>();
-                bakingSodaText = GameObject.Find("Baking Soda Text").GetComponent<Text>();
+                bakingSodaText = GameObject.Find("Baking Text").GetComponent<Text>();
+                Debug.Log(bakingSodaText);
                 blueberryText = GameObject.Find("Blueberries Text").GetComponent<Text>();
                 milkText = GameObject.Find("Milk Text").GetComponent<Text>();
                 saltText = GameObject.Find("Salt Text").GetComponent<Text>();

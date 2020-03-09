@@ -1011,7 +1011,7 @@ MonoBehaviour:
   - {fileID: 416471985}
   - {fileID: 96902646}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!1 &61059685
 GameObject:
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   - {fileID: 665209197}
   - {fileID: 901359692}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!195 &111586323
 NavMeshAgent:
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   - {fileID: 2009714741}
   - {fileID: 2068766445}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!1 &118664262
 GameObject:
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   - {fileID: 1551810496}
   - {fileID: 396182594}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!195 &281343641
 NavMeshAgent:
@@ -5143,7 +5143,7 @@ MonoBehaviour:
   - {fileID: 256923529}
   - {fileID: 1443246728}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!195 &499220794
 NavMeshAgent:
@@ -6417,7 +6417,7 @@ MonoBehaviour:
   - {fileID: 209884878}
   - {fileID: 885786857}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!195 &633297719
 NavMeshAgent:
@@ -6942,7 +6942,7 @@ MonoBehaviour:
   - {fileID: 156511194}
   - {fileID: 945529932}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!1 &680500678
 GameObject:
@@ -9197,7 +9197,7 @@ MonoBehaviour:
   - {fileID: 27857245}
   - {fileID: 1943415165}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!195 &969432593
 NavMeshAgent:
@@ -14466,6 +14466,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6b2785cc46291e42990174ef4394cc1, type: 3}
+--- !u!4 &1565838770 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5219688041747093909, guid: b6b2785cc46291e42990174ef4394cc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1565838769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1569507360
 GameObject:
   m_ObjectHideFlags: 0
@@ -15905,12 +15911,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62caa97a4819f674f9495f21a47cdfce, type: 3}
---- !u!4 &1712404825 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3462400030289733114, guid: 62caa97a4819f674f9495f21a47cdfce,
-    type: 3}
-  m_PrefabInstance: {fileID: 1712404824}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1736051122
 GameObject:
   m_ObjectHideFlags: 0
@@ -16655,7 +16655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e64a6296d20400ba7c3f7a31b43d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   speed: 6
   attack1Range: 1
   attack1Damage: 1
@@ -17955,7 +17955,7 @@ MonoBehaviour:
   - {fileID: 948008258}
   - {fileID: 631575139}
   currWaypoint: 0
-  target: {fileID: 1712404825}
+  target: {fileID: 1565838770}
   aiState: 0
 --- !u!195 &2053551986
 NavMeshAgent:
