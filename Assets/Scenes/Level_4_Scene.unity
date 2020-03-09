@@ -4716,6 +4716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurtleShellPBR
       objectReference: {fileID: 0}
+    - target: {fileID: 1774625739149480, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4906828391645816, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.809666
@@ -8458,8 +8462,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.73
+  m_Center: {x: 0, y: 0.39, z: -0.06}
 --- !u!1 &1350178215
 GameObject:
   m_ObjectHideFlags: 0
@@ -8980,6 +8984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chili
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917410254079077290, guid: 9dc7f8d5a867b484aa6cad65763e4063,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc7f8d5a867b484aa6cad65763e4063, type: 3}
@@ -10686,6 +10695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimePBR
       objectReference: {fileID: 0}
+    - target: {fileID: 1919012471076396, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4023215848608658, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54.86123
@@ -11336,8 +11349,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.56
+  m_Center: {x: 0, y: 0.42, z: 0}
 --- !u!1 &1865115394
 GameObject:
   m_ObjectHideFlags: 0

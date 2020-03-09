@@ -3316,7 +3316,7 @@ GameObject:
   - component: {fileID: 281343644}
   m_Layer: 0
   m_Name: Langsat (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5141,7 +5141,7 @@ GameObject:
   - component: {fileID: 499220795}
   m_Layer: 0
   m_Name: Chili
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6521,8 +6521,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.84
-  m_Center: {x: 0, y: 0.47, z: 0}
+  m_Radius: 0.56
+  m_Center: {x: 0, y: 0.39, z: 0}
 --- !u!1 &638886723
 GameObject:
   m_ObjectHideFlags: 0
@@ -7037,7 +7037,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.69
+  m_Radius: 0.57
   m_Center: {x: 0, y: 0.42, z: 0}
 --- !u!1 &680500678
 GameObject:
@@ -7561,6 +7561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableCount: 0
   levelNumber: 2
+  ingredientsCollected: []
 --- !u!114 &725526115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9207,7 +9208,7 @@ GameObject:
   - component: {fileID: 969432594}
   m_Layer: 0
   m_Name: Chili (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16765,7 +16766,7 @@ GameObject:
   - component: {fileID: 1902557714}
   m_Layer: 0
   m_Name: Kiwi
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16837,10 +16838,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.38
-  m_Height: 1.35
+  m_Radius: 0.3
+  m_Height: 1.17
   m_Direction: 1
-  m_Center: {x: 0, y: 0.55, z: 0}
+  m_Center: {x: 0, y: 0.44, z: 0}
 --- !u!1 &1903975439
 GameObject:
   m_ObjectHideFlags: 0
@@ -18075,7 +18076,7 @@ GameObject:
   - component: {fileID: 2053551987}
   m_Layer: 0
   m_Name: Langsat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

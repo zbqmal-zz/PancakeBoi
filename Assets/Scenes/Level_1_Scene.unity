@@ -335,6 +335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimePBR
       objectReference: {fileID: 0}
+    - target: {fileID: 1919012471076396, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4023215848608658, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.53
@@ -731,8 +735,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.4, z: 0}
+  m_Radius: 0.53
+  m_Center: {x: 0.21, y: 0.44, z: 0}
 --- !u!1 &437699879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4830563601020220541, guid: 770d6870de2b94c398a5cdca912f4bd9,
@@ -1122,6 +1126,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &713387602
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713387599}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.43, z: 0}
 --- !u!1 &763314812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,6 +2332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chili
+      objectReference: {fileID: 0}
+    - target: {fileID: 1917410254079077290, guid: 9dc7f8d5a867b484aa6cad65763e4063,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1917410254184790228, guid: 9dc7f8d5a867b484aa6cad65763e4063,
         type: 3}
