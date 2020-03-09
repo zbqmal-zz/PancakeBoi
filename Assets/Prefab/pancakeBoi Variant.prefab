@@ -44,8 +44,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.45
-  m_Height: 1.6
+  m_Radius: 0.5
+  m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.85, z: 0.05}
 --- !u!114 &-9171315756768511925
@@ -84,6 +84,7 @@ MonoBehaviour:
   isGrounded: 1
   vel: {x: 0, y: 0, z: 0}
   pos: {x: 0, y: 0, z: 0}
+  resetPos: 0
 --- !u!114 &348873677913702597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectableCount: 0
   levelNumber: 0
+  ingredientsCollected: []
 --- !u!1001 &939768329032774287
 PrefabInstance:
   m_ObjectHideFlags: 0

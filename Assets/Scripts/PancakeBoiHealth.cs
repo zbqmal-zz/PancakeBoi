@@ -52,9 +52,8 @@ public class PancakeBoiHealth : MonoBehaviour
         }
     }
 
-    void OnC(Collision c) {
+    void OnCollisionStay(Collision c) {
         if (c.gameObject.CompareTag("Enemy") && Time.time > invulnTime && health > 1) {
-            Debug.Log("Collision enemy");
             invulnTime = Time.time + invulnPeriod;
             HUD.transform.GetChild(--health).gameObject.SetActive(false);
         }
