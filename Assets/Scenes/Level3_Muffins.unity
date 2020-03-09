@@ -1564,6 +1564,7 @@ GameObject:
   - component: {fileID: 367503733}
   - component: {fileID: 367503732}
   - component: {fileID: 367503731}
+  - component: {fileID: 367503735}
   m_Layer: 0
   m_Name: Chili (2)
   m_TagString: Untagged
@@ -1647,6 +1648,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &367503735
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367503730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.74
+  m_Direction: 1
+  m_Center: {x: 0.22, y: 0.57, z: 0}
 --- !u!1 &381083318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,6 +2569,19 @@ MonoBehaviour:
   currWaypoint: 0
   target: {fileID: 1913965458}
   aiState: 0
+--- !u!135 &541840904
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541840901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.59
+  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!1001 &568781656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4396,6 +4424,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &896933912
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896933909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.56
+  m_Center: {x: 0, y: 0.43, z: 0}
 --- !u!1 &898598684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,7 +4804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920622293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.3, y: 0.08, z: -104.7}
+  m_LocalPosition: {x: -42.3, y: 0.6, z: -104.7}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5562,7 +5603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4023215848608658, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.07
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4023215848608658, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5642,6 +5683,19 @@ MonoBehaviour:
   currWaypoint: 0
   target: {fileID: 1913965458}
   aiState: 0
+--- !u!135 &1080217120
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080217117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.52, z: 0}
 --- !u!1 &1083527257
 GameObject:
   m_ObjectHideFlags: 0
@@ -7613,6 +7667,7 @@ GameObject:
   - component: {fileID: 1440613669}
   - component: {fileID: 1440613668}
   - component: {fileID: 1440613667}
+  - component: {fileID: 1440613670}
   m_Layer: 0
   m_Name: Kiwi
   m_TagString: Untagged
@@ -7677,6 +7732,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!136 &1440613670
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440613666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.41
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.64, z: 0}
 --- !u!1 &1464413762
 GameObject:
   m_ObjectHideFlags: 0
@@ -9319,6 +9388,7 @@ GameObject:
   - component: {fileID: 1712985877}
   - component: {fileID: 1712985876}
   - component: {fileID: 1712985875}
+  - component: {fileID: 1712985879}
   m_Layer: 0
   m_Name: Chili (1)
   m_TagString: Untagged
@@ -9402,6 +9472,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1712985879
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712985874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.65
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0.15, y: 0.59, z: 0}
 --- !u!1 &1720007284
 GameObject:
   m_ObjectHideFlags: 0
@@ -9612,7 +9696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730772094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.9, y: 0.36, z: -92.93}
+  m_LocalPosition: {x: -30.9, y: 0.61, z: -92.93}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10616,6 +10700,7 @@ GameObject:
   - component: {fileID: 1960118967}
   - component: {fileID: 1960118966}
   - component: {fileID: 1960118965}
+  - component: {fileID: 1960118969}
   m_Layer: 0
   m_Name: Chili (3)
   m_TagString: Untagged
@@ -10699,6 +10784,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1960118969
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960118964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.59
+  m_Direction: 1
+  m_Center: {x: 0.16, y: 0.52, z: 0}
 --- !u!1001 &1988075372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10863,6 +10962,7 @@ GameObject:
   - component: {fileID: 2017552189}
   - component: {fileID: 2017552188}
   - component: {fileID: 2017552187}
+  - component: {fileID: 2017552191}
   m_Layer: 0
   m_Name: Chili
   m_TagString: Untagged
@@ -10946,6 +11046,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2017552191
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017552186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.65
+  m_Height: 1.61
+  m_Direction: 1
+  m_Center: {x: 0.15, y: 0.53, z: -0.03}
 --- !u!1 &2053139479
 GameObject:
   m_ObjectHideFlags: 0
