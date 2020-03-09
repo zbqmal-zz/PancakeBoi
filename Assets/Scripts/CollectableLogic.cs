@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CollectableLogic : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int collectableCount;
+    public int collectableCount;
     private int collectableTotal;
     public int levelNumber;
     private GameObject pan;

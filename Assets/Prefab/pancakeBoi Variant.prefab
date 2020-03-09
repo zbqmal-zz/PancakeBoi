@@ -63,6 +63,7 @@ MonoBehaviour:
   HUD: {fileID: 0}
   health: 3
   invulnPeriod: 2
+  lastSafePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &637510286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +81,22 @@ MonoBehaviour:
   midAirVelocity: 4
   jumpFloatness: 1.2
   fallSpeedMultiplier: 1.2
+  isGrounded: 1
   vel: {x: 0, y: 0, z: 0}
+  pos: {x: 0, y: 0, z: 0}
+--- !u!114 &348873677913702597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelNumber: 0
 --- !u!1001 &939768329032774287
 PrefabInstance:
   m_ObjectHideFlags: 0

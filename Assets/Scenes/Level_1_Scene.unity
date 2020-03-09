@@ -3792,10 +3792,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9171315756768511925, guid: b6b2785cc46291e42990174ef4394cc1,
+        type: 3}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 1684130629763316842}
     - target: {fileID: 637510286, guid: b6b2785cc46291e42990174ef4394cc1, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 1042843226}
+    - target: {fileID: 348873677913702597, guid: b6b2785cc46291e42990174ef4394cc1,
+        type: 3}
+      propertyPath: levelNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5219688041747093909, guid: b6b2785cc46291e42990174ef4394cc1,
         type: 3}
       propertyPath: m_LocalPosition.x
