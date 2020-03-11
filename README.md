@@ -37,15 +37,18 @@ Level 1: The goal of level 1 is to create scrambled eggs and has 5 ingredients. 
 - Jello object: Makes you jump higher when landing on it
 - Button and Wall: Pressing the button lowers a wall
  - Cracker Platform: Wobbles when landed on and falls after a certain amount of time
+ 
 Level 2: The goal of level 2 is to create french toast and has 7 ingredients. This level shows off the following components in addition to the ones above:
 - More complex platform design than level 1
 - Cracker platforms
 - Floating spiral staircase
+
 Level 3: The goal of level 3 is to create blueberry muffins and has 9 ingredients. This level shows off the following components in addition to the ones above:
 - More complex platform design than level 2
 - Jello object
 - Cracker platforms
 - Walls obscuring vision
+
 Level 4: The goal of level 4 is to create a breakfast burrito and has 11 ingredients. This level shows off the following components in addition to the ones above:
 - Most complex platform design in the game
 - Moving blocks: Move based on animations. You can ride them, but this alpha hasn’t completed how to transit the blocks and player together. In other words, it might be very difficult to go to the next platform through the moving blocks
