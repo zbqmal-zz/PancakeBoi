@@ -69,8 +69,23 @@ EditorBuildSettings:
     path: Assets/Prefab/Fantasy_Kingdom_Pack_Lite/Demo/Lite_Demo01.unity
     guid: ee1be164e0dea1545b479b6df854e8d5
   - enabled: 1
+    path: Assets/Prefab/Lamps/StandingLamps.unity
+    guid: c376f99006003024b9781766cfb95a5f
+  - enabled: 1
+    path: Assets/Prefab/Lamps/TableLamps.unity
+    guid: b94cafc334af1c84c9b3584d8b932cac
+  - enabled: 1
+    path: Assets/Prefab/Lamps/WallLamps.unity
+    guid: 0e6d696128424af468a48c23ec7f1b43
+  - enabled: 1
+    path: Assets/Prefab/Lamps/example_pbr.unity
+    guid: f2b49e374e5284918be3362d81a51c20
+  - enabled: 1
     path: Assets/Prefab/LowpolySimpleHouse/Assets/Demo Scene/Demo.unity
     guid: 5425b1cf1a6d649409960566cd321c18
+  - enabled: 1
+    path: Assets/Prefab/Park Assets/Scene/1.unity
+    guid: 46c76ea4efc178b489cec1e3b6f176cf
   - enabled: 1
     path: Assets/RPG Monster Duo PBR Polyart/Scenes/DuoScene.unity
     guid: f7b7e81352960c44f823fb500723f0c1
