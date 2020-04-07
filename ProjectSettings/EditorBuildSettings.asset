@@ -57,6 +57,9 @@ EditorBuildSettings:
     path: Assets/Food Enemies/Model Pack 1/Scene 1.unity
     guid: b78ea0a9b77224542bc7de186598ba53
   - enabled: 1
+    path: Assets/JellyShader/Example/Scenes/ExampleScene.unity
+    guid: f928b5cc7e6a9ca41b1920896c2353ac
+  - enabled: 1
     path: Assets/Prefab/3D Cartoon Village/Scene/Scene.unity
     guid: 85ed28027983b05439f5b2e370a7514e
   - enabled: 1
