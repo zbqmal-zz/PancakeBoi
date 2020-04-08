@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Characters - Enemies/slime_turtle/Materials/SlimePBR.mat.meta
+guid: e1b288de1667cf549b8ef150c0914a20
+timeCreated: 1575469300
+=======
+guid: 76ba543a11481b94fbb79034d865c48e
+timeCreated: 1534413630
+>>>>>>> joon_Level_Design:Assets/Prefab/3D Cartoon Village/Materials/BackColor.mat.meta
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
