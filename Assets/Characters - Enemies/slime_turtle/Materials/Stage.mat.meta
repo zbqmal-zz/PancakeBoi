@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 guid: 7b0bb65175367654a9d25cce8a288071
+<<<<<<< HEAD
 timeCreated: 1573788858
 licenseType: Store
+=======
+>>>>>>> joon_Level_Design
 NativeFormatImporter:
-  mainObjectFileID: -1
+  externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

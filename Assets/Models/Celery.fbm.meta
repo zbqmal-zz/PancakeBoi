@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: a07c034d9bd1c7e4989b13633a0bfa9c
+<<<<<<< HEAD:Assets/Models/Celery.fbm.meta
+guid: 7b7b33b0da0fcb4489b507be3c2f4580
+=======
+guid: 0d7a18d4f2009504f8931d51ed950a5c
+>>>>>>> joon_Level_Design:Assets/Characters - Enemies/slime_turtle/Animations/Slime/Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
