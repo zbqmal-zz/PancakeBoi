@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ThrowMask
+  m_Mask: 00000000010000000100000000000000000000000100000000000000010000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: PancakeBoi
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/Neck
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/Neck/Head
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/Neck/Head/Head_end
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.l/Arm.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.l/Arm.l/Forearm.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.l/Arm.l/Forearm.l/Hand.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.l/Arm.l/Forearm.l/Hand.l/Hand.l_end
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.r/Arm.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.r/Arm.r/Forearm.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.r/Arm.r/Forearm.r/Hand.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip/Spine/Chest/UpperChest/shoulder.r/Arm.r/Forearm.r/Hand.r/Hand.r_end
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.l/UpperLeg.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.l/UpperLeg.l/LowerLeg.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.l/UpperLeg.l/LowerLeg.l/Foot.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.l/UpperLeg.l/LowerLeg.l/Foot.l/Toe.l
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.l/UpperLeg.l/LowerLeg.l/Foot.l/Toe.l/Toe.l_end
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.r/UpperLeg.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.r/UpperLeg.r/LowerLeg.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.r/UpperLeg.r/LowerLeg.r/Foot.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.r/UpperLeg.r/LowerLeg.r/Foot.r/Toe.r
+    m_Weight: 1
+  - m_Path: PancakeBoi/Hip.r/UpperLeg.r/LowerLeg.r/Foot.r/Toe.r/Toe.r_end
+    m_Weight: 1
+  - m_Path: PancakeBoi.mesh
+    m_Weight: 1

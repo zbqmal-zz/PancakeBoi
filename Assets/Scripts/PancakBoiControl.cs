@@ -37,6 +37,7 @@ public class PancakBoiControl : MonoBehaviour
 
     void Update()
     {   
+        anim.SetBool("Throw", false);
         anim.SetBool("Running", false);
         // Vector3 raycastOrigin = this.transform.TransformPoint
         isGrounded = Physics.SphereCast(new Ray(this.transform.TransformPoint(cc.center), Vector3.down), 0.38f, 0.53f);
@@ -103,6 +104,10 @@ public class PancakBoiControl : MonoBehaviour
         }
 
         anim.SetFloat("fallSpeed", vel.y);
+
+        if (Input.GetButtonDown("Fire1")) {
+            anim.SetBool("Throw", true);
+        }
         
 
 
