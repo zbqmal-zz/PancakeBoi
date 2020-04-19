@@ -1,78 +1,185 @@
 fileFormatVersion: 2
 guid: 60c165d3a75334f0da44e4483cf1b7b0
-timeCreated: 1493186127
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Chilli
-    100004: Ctrl
-    100006: Head
-    100008: Head_Ctrl
-    100010: IK
-    100012: Joint
-    100014: Root
-    100016: Root_Ctrl
-    100018: Spine_01
-    100020: Spine_02
-    100022: Spine_03
-    100024: Spine_Ctrl
-    100026: Spine_Ctrl 1
-    100028: Tail_01
-    100030: Tail_02
-    100032: Tail_03
-    100034: Tail_04
-    100036: Tail_Base_Ctrl
-    100038: Tail_IK
-    100040: Tail_Middle_Ctrl
-    100042: World_Ctrl
-    400000: //RootNode
-    400002: Chilli
-    400004: Ctrl
-    400006: Head
-    400008: Head_Ctrl
-    400010: IK
-    400012: Joint
-    400014: Root
-    400016: Root_Ctrl
-    400018: Spine_01
-    400020: Spine_02
-    400022: Spine_03
-    400024: Spine_Ctrl
-    400026: Spine_Ctrl 1
-    400028: Tail_01
-    400030: Tail_02
-    400032: Tail_03
-    400034: Tail_04
-    400036: Tail_Base_Ctrl
-    400038: Tail_IK
-    400040: Tail_Middle_Ctrl
-    400042: World_Ctrl
-    4300000: Chilli
-    7400000: 'Chili_Walk_2 '
-    9500000: //RootNode
-    13700000: Chilli
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Chilli
+  - first:
+      1: 100004
+    second: Ctrl
+  - first:
+      1: 100006
+    second: Head
+  - first:
+      1: 100008
+    second: Head_Ctrl
+  - first:
+      1: 100010
+    second: IK
+  - first:
+      1: 100012
+    second: Joint
+  - first:
+      1: 100014
+    second: Root
+  - first:
+      1: 100016
+    second: Root_Ctrl
+  - first:
+      1: 100018
+    second: Spine_01
+  - first:
+      1: 100020
+    second: Spine_02
+  - first:
+      1: 100022
+    second: Spine_03
+  - first:
+      1: 100024
+    second: Spine_Ctrl
+  - first:
+      1: 100026
+    second: Spine_Ctrl 1
+  - first:
+      1: 100028
+    second: Tail_01
+  - first:
+      1: 100030
+    second: Tail_02
+  - first:
+      1: 100032
+    second: Tail_03
+  - first:
+      1: 100034
+    second: Tail_04
+  - first:
+      1: 100036
+    second: Tail_Base_Ctrl
+  - first:
+      1: 100038
+    second: Tail_IK
+  - first:
+      1: 100040
+    second: Tail_Middle_Ctrl
+  - first:
+      1: 100042
+    second: World_Ctrl
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Chilli
+  - first:
+      4: 400004
+    second: Ctrl
+  - first:
+      4: 400006
+    second: Head
+  - first:
+      4: 400008
+    second: Head_Ctrl
+  - first:
+      4: 400010
+    second: IK
+  - first:
+      4: 400012
+    second: Joint
+  - first:
+      4: 400014
+    second: Root
+  - first:
+      4: 400016
+    second: Root_Ctrl
+  - first:
+      4: 400018
+    second: Spine_01
+  - first:
+      4: 400020
+    second: Spine_02
+  - first:
+      4: 400022
+    second: Spine_03
+  - first:
+      4: 400024
+    second: Spine_Ctrl
+  - first:
+      4: 400026
+    second: Spine_Ctrl 1
+  - first:
+      4: 400028
+    second: Tail_01
+  - first:
+      4: 400030
+    second: Tail_02
+  - first:
+      4: 400032
+    second: Tail_03
+  - first:
+      4: 400034
+    second: Tail_04
+  - first:
+      4: 400036
+    second: Tail_Base_Ctrl
+  - first:
+      4: 400038
+    second: Tail_IK
+  - first:
+      4: 400040
+    second: Tail_Middle_Ctrl
+  - first:
+      4: 400042
+    second: World_Ctrl
+  - first:
+      43: 4300000
+    second: Chilli
+  - first:
+      74: 7400000
+    second: 'Chili_Walk_2 '
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Chilli
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong1
+    second: {fileID: 2100000, guid: 7ab30638ee11d4a33ae4f8c0f4534107, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -80,13 +187,23 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -96,12 +213,126 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: 03_Chili_Walk_2 (Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chilli
+      parentName: 03_Chili_Walk_2 (Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: World_Ctrl
+      parentName: 03_Chili_Walk_2 (Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl
+      parentName: World_Ctrl
+      position: {x: 0.23335753, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: 0.9397733, w: 0.34179837}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Ctrl
+      parentName: Ctrl
+      position: {x: -0.35999998, y: 0.51, z: 0}
+      rotation: {x: 0.040938765, y: -0.06702667, z: -0.51387703, w: 0.854261}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_Ctrl
+      parentName: Root_Ctrl
+      position: {x: 0.42, y: 0.26999998, z: 6.9508344e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Middle_Ctrl
+      parentName: Root_Ctrl
+      position: {x: -0.4256167, y: -0.2599595, z: 0}
+      rotation: {x: -0.07698268, y: -0.015563553, z: -0.6271694, w: 0.77491295}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_Ctrl 1
+      parentName: Root_Ctrl
+      position: {x: 0.17999999, y: 0.6418567, z: 3.5527136e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Base_Ctrl
+      parentName: Ctrl
+      position: {x: -0.31, y: 0.14999999, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK
+      parentName: World_Ctrl
+      position: {x: 0.23335753, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_Ctrl
+      parentName: IK
+      position: {x: 0.06, y: 0.78, z: 6.9508344e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_IK
+      parentName: IK
+      position: {x: -0.31, y: 0.14999999, z: 8.317861e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Joint
+      parentName: World_Ctrl
+      position: {x: 0.23335753, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root
+      parentName: Joint
+      position: {x: -0.35999998, y: 0.51, z: 0}
+      rotation: {x: -0.52573144, y: 0.8506506, z: -8.4279097e-17, w: -1.9895558e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_01
+      parentName: Root
+      position: {x: -0.089442715, y: -0.000000079890995, z: -9.7838245e-24}
+      rotation: {x: -1.2189633e-16, y: -6.007336e-17, z: 0.3873452, w: 0.9219347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_02
+      parentName: Spine_01
+      position: {x: -0.19104972, y: -0.00000032142952, z: -3.9363765e-23}
+      rotation: {x: -3.0653597e-18, y: 3.89929e-18, z: 0.19343218, w: 0.9811137}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_03
+      parentName: Spine_02
+      position: {x: -0.24738634, y: 0.000001051223, z: -1.6931166e-17}
+      rotation: {x: 5.8534596e-17, y: 3.7946077e-17, z: -0.008986786, w: 0.9999597}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Spine_03
+      position: {x: -0.18439089, y: 0.0000006188358, z: -1.9661934e-17}
+      rotation: {x: 1.6920648e-17, y: 4.448204e-18, z: 0.113472, w: 0.9935412}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_01
+      parentName: Root
+      position: {x: 0.08944274, y: -0.022360599, z: -2.7383837e-18}
+      rotation: {x: 1.208605e-16, y: 5.7003324e-18, z: 0.6360701, w: 0.7716313}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_02
+      parentName: Tail_01
+      position: {x: 0.16378234, y: -0.046640594, z: -2.4200595e-17}
+      rotation: {x: 1.4852711e-17, y: -7.9118676e-18, z: 0.073703565, w: 0.99728024}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_03
+      parentName: Tail_02
+      position: {x: 0.10335032, y: -0.05402509, z: -1.8073377e-17}
+      rotation: {x: -6.0398684e-17, y: 1.02751793e-16, z: -0.23851652, w: 0.9711385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_04
+      parentName: Tail_03
+      position: {x: 0.09089432, y: -0.015434487, z: -1.8901795e-18}
+      rotation: {x: 6.77763e-18, y: 2.3274919e-17, z: -0.0839996, w: 0.9964658}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -109,14 +340,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
