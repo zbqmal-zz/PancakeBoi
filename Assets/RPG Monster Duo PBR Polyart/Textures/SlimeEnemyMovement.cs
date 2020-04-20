@@ -27,6 +27,7 @@ public class SlimeEnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Debug.Log(destination == _player.position);
         _nav.SetDestination(destination);
         // _nav.SetDestination(_player.position);
     }
@@ -37,6 +38,7 @@ public class SlimeEnemyMovement : MonoBehaviour
 
     public void ResetDestination()
     {
+        Debug.Log("Back to Inital pos.");
         destination = initialPos;
     }
 }
