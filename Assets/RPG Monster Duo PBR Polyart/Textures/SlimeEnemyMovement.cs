@@ -38,7 +38,7 @@ public class SlimeEnemyMovement : MonoBehaviour
 
     public void ResetDestination()
     {
-        Debug.Log("Back to Inital pos.");
+        // Debug.Log("Back to Inital pos.");
         destination = initialPos;
     }
 }

@@ -7,6 +7,7 @@ public class SlimeEnemyAttack : MonoBehaviour
     Animator _animator;
     GameObject _player;
     AudioSource audioSource;
+    int health = 5;
 
     void Awake()
     {
@@ -27,10 +28,25 @@ public class SlimeEnemyAttack : MonoBehaviour
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
         audioSource.mute = false;
-        if(collision.gameObject.name == "pancakeBoi Variant")
-        {
+        // if(collision.gameObject.name == "pancakeBoi Variant")
+        // {
             audioSource.Play();
+        if(collision.gameObject.CompareTag("Projectile") && health > 2)
+        {
+            _animator.SetBool("IsHit", true);
+            --health;
         }
+        else if(collision.gameObject.CompareTag("Projectile") && health == 2)
+        {
+            _animator.SetBool("IsDamaged", true);
+            --health;
+        }
+        else if(collision.gameObject.CompareTag("Projectile") && health == 0)
+        {
+            _animator.SetBool("IsDead", true);
+            Destroy(this.gameObject);
+        }
+        // }
 
     }
 
