@@ -3,7 +3,17 @@ guid: beef531b59a394e29947fe550ee5106b
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Backdrop
+    second: {fileID: 2100000, guid: 9e2857e9b04fa406097e1d6ba105b9b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pudding
+    second: {fileID: 2100000, guid: 1ed235b46c08b41d4a4ffd5b2bd1dd5f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
