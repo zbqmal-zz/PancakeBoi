@@ -16,7 +16,7 @@ public class Button_Animation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player") && !isPressed) {
             audio.Play();
             buttonController.SetBool("isPressed", true);
             wallController.SetBool("isOpened", true);
