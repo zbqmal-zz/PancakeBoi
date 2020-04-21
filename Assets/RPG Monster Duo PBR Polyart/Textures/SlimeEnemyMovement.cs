@@ -12,6 +12,7 @@ public class SlimeEnemyMovement : MonoBehaviour
     private Vector3 initialPos;
     private Quaternion initialRotation;
     Vector3 destination;
+    int health;
     
 
     // Start is called before the first frame update
@@ -22,6 +23,8 @@ public class SlimeEnemyMovement : MonoBehaviour
         initialPos = transform.position;
         initialRotation = transform.rotation;
         destination = initialPos;
+
+        health = this.GetComponent<SlimeEnemyAttack>().getHealth();
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class SlimeEnemyMovement : MonoBehaviour
     {
         // Debug.Log(destination == _player.position);
         _nav.SetDestination(destination);
+        health = this.GetComponent<SlimeEnemyAttack>().getHealth();
         // _nav.SetDestination(_player.position);
     }
     public void changeDestination(Vector3 newDestination)
@@ -40,5 +44,18 @@ public class SlimeEnemyMovement : MonoBehaviour
     {
         // Debug.Log("Back to Inital pos.");
         destination = initialPos;
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            Debug.DrawRay(contact.point, contact.normal, Color.white);
+        }
+        if(collision.gameObject.CompareTag("Projectile") && health <= 2)
+        {
+            _nav.Stop();
+            Debug.Log("Stopped nav agent");
+        }
+
     }
 }

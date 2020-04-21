@@ -33,18 +33,23 @@ public class SlimeEnemyAttack : MonoBehaviour
             audioSource.Play();
         if(collision.gameObject.CompareTag("Projectile") && health > 2)
         {
-            _animator.SetBool("IsHit", true);
-            --health;
+            _animator.Play("GetHit");
+            // _animator.SetBool("IsHit", true);
+            health--;
+            Debug.Log(health);
         }
         else if(collision.gameObject.CompareTag("Projectile") && health == 2)
         {
-            _animator.SetBool("IsDamaged", true);
-            --health;
+            _animator.Play("Dizzy");
+            // _animator.SetBool("IsDamaged", true);
+            health--;
+            Debug.Log(health);
         }
-        else if(collision.gameObject.CompareTag("Projectile") && health == 0)
+        else if(collision.gameObject.CompareTag("Projectile") && health <= 1)
         {
-            _animator.SetBool("IsDead", true);
-            Destroy(this.gameObject);
+            _animator.Play("Die");
+            // _animator.SetBool("IsDead", true);
+            Destroy(this.gameObject, 5.0f);
         }
         // }
 
@@ -65,4 +70,5 @@ public class SlimeEnemyAttack : MonoBehaviour
             _animator.SetBool("IsNearPlayer", false);
         }
     }
+    public int getHealth() {return health;}
 }
