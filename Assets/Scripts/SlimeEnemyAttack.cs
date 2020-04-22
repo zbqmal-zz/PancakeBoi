@@ -31,28 +31,20 @@ public class SlimeEnemyAttack : MonoBehaviour
         // if(collision.gameObject.name == "pancakeBoi Variant")
         // {
             audioSource.Play();
-        if(collision.gameObject.CompareTag("Projectile") && health > 2)
+        if(collision.gameObject.CompareTag("Projectile") && health >= 2)
         {
             _animator.Play("GetHit");
             // _animator.SetBool("IsHit", true);
             health--;
             Debug.Log(health);
         }
-        else if(collision.gameObject.CompareTag("Projectile") && health == 2)
+        else if(collision.gameObject.CompareTag("Projectile") && health == 1)
         {
             _animator.Play("Dizzy");
-            // _animator.SetBool("IsDamaged", true);
-            health--;
-            Debug.Log(health);
+            Debug.Log("Getting Dizzy....");
+            StartCoroutine(ExecuteAfterTime(5.0f));
+            _animator.SetBool("IsRestored", false);
         }
-        else if(collision.gameObject.CompareTag("Projectile") && health <= 1)
-        {
-            _animator.Play("Die");
-            // _animator.SetBool("IsDead", true);
-            Destroy(this.gameObject, 5.0f);
-        }
-        // }
-
     }
 
     void OnTriggerEnter(Collider other)
@@ -71,4 +63,16 @@ public class SlimeEnemyAttack : MonoBehaviour
         }
     }
     public int getHealth() {return health;}
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        // _animator.Play("Dizzy");
+        yield return new WaitForSeconds(time);
+    
+        // Code to execute after the delay
+        health = 5;
+        _animator.SetBool("IsRestored", true);
+        Debug.Log("RESTORED!");
+        Debug.Log(health);
+    }
 }

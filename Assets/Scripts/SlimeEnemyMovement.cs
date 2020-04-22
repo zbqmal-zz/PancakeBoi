@@ -33,6 +33,10 @@ public class SlimeEnemyMovement : MonoBehaviour
         // Debug.Log(destination == _player.position);
         _nav.SetDestination(destination);
         health = this.GetComponent<SlimeEnemyAttack>().getHealth();
+        if(health > 1) 
+        { 
+            _nav.isStopped = false;
+        }
         // _nav.SetDestination(_player.position);
     }
     public void changeDestination(Vector3 newDestination)
@@ -51,11 +55,16 @@ public class SlimeEnemyMovement : MonoBehaviour
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
-        if(collision.gameObject.CompareTag("Projectile") && health <= 2)
+        if(collision.gameObject.CompareTag("Projectile") && health == 1)
         {
-            _nav.Stop();
+            _nav.isStopped = true;
             Debug.Log("Stopped nav agent");
-        }
+        } 
+        // else if(health > 1)
+        // {
+        //     _nav.isStopped = false;
+        //     Debug.Log("Nav agent resumed");
+        // }
 
     }
 }
