@@ -16,20 +16,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 3
---- !u!64 &7066080635828783286
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7064199147418500767}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 032e9c3d6b8f7bd4281b52741574f3af, type: 3}
 --- !u!136 &7066080635828783287
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -154,6 +140,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6806666661588659862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064199147418500767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccc2c39acc5d4e2cb68458983d68cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalColour: {r: 1, g: 1, b: 1, a: 1}
+  FlashColour: {r: 0, g: 0.8696656, b: 1, a: 1}
+  GameMesh: {fileID: 7198710873776552923}
+  FlashDelay: 0.025
+  TimesToFlash: 3
 --- !u!195 &7066080635828783285
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -200,6 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a48bd14ba384db6ac01df9e0c5e7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: a57718fbaf76a402f9f189889dc4c0a1, type: 3}
+  dizzySound: {fileID: 8300000, guid: 7fe7ea18031214dd3b8902cd619cbb21, type: 3}
 --- !u!1 &7066080636058180282
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7064199147418500767}
-  slime: {fileID: 0}
   inTerritory: 0
 --- !u!1 &7347400735721302537
 GameObject:
@@ -362,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1919012471076396, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
       propertyPath: m_TagString
-      value: Slime Enemy
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4023215848608658, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
       propertyPath: m_LocalPosition.x
@@ -416,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 95161444847813696, guid: 55776efecb0cd134ea5f418c2f97a705,
         type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 137702289541837672, guid: 55776efecb0cd134ea5f418c2f97a705,
         type: 3}
@@ -434,6 +438,12 @@ GameObject:
 --- !u!4 &7062077360540326689 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4023215848608658, guid: 55776efecb0cd134ea5f418c2f97a705,
+    type: 3}
+  m_PrefabInstance: {fileID: 7066080635828783283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &7198710873776552923 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 137702289541837672, guid: 55776efecb0cd134ea5f418c2f97a705,
     type: 3}
   m_PrefabInstance: {fileID: 7066080635828783283}
   m_PrefabAsset: {fileID: 0}

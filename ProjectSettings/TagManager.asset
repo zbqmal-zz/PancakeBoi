@@ -14,8 +14,8 @@ TagManager:
   - Item_3_img
   - Pan
   - Pan Trigger
-  - Slime Enemy
   - Projectile
+  - Slime Enemy
   layers:
   - Default
   - TransparentFX

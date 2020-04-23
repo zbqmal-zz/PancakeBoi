@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyTerritory : MonoBehaviour
 {
     public GameObject enemy;
-    public GameObject slime;
-    SlimeEnemyMovement slimeEnemy;
+    EnemyMovement navDestination;
     private GameObject _player;
     public bool inTerritory;
     Animator _animator;
@@ -15,10 +14,10 @@ public class EnemyTerritory : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        slime = GameObject.FindGameObjectWithTag("Slime Enemy");
-        slimeEnemy = enemy.GetComponent<SlimeEnemyMovement>();
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        navDestination = enemy.GetComponent<EnemyMovement>();
         inTerritory = false;
-        _animator = slime.GetComponent<Animator>();
+        _animator = enemy.GetComponent<Animator>();
     }
 
     void Update()
@@ -26,10 +25,10 @@ public class EnemyTerritory : MonoBehaviour
         if(inTerritory)
         {
             // Debug.Log("We in dere");
-            slimeEnemy.changeDestination(_player.transform.position);
+            navDestination.changeDestination(_player.transform.position);
         } else 
         {
-            slimeEnemy.ResetDestination();
+            navDestination.ResetDestination();
         }
 
     }
@@ -38,7 +37,7 @@ public class EnemyTerritory : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
-            // slimeEnemy.destination = _player.transform.position;
+            // navDestination.destination = _player.transform.position;
             inTerritory = true;
             _animator.SetBool("IsInTerritory", true);
         }
@@ -48,7 +47,7 @@ public class EnemyTerritory : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
-            // slimeEnemy.ResetDestination();
+            // navDestination.ResetDestination();
             inTerritory = false;
             _animator.SetBool("IsInTerritory", false);
         }

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeEnemyAttack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     Animator _animator;
     GameObject _player;
-    AudioSource audioSource;
+    AudioSource audio;
+    public AudioClip hitSound;
+    public AudioClip dizzySound;
     int health = 5;
 
     void Awake()
@@ -17,8 +19,8 @@ public class SlimeEnemyAttack : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.mute = true;
+        audio = GetComponent<AudioSource>();
+        audio.mute = true;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -27,10 +29,10 @@ public class SlimeEnemyAttack : MonoBehaviour
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
-        audioSource.mute = false;
+        audio.mute = false;
         // if(collision.gameObject.name == "pancakeBoi Variant")
         // {
-            audioSource.Play();
+            audio.PlayOneShot(hitSound, 0.7f);
         if(collision.gameObject.CompareTag("Projectile") && health >= 2)
         {
             _animator.Play("GetHit");
@@ -67,6 +69,7 @@ public class SlimeEnemyAttack : MonoBehaviour
     IEnumerator ExecuteAfterTime(float time)
     {
         // _animator.Play("Dizzy");
+        audio.PlayOneShot(dizzySound, 0.7f);
         yield return new WaitForSeconds(time);
     
         // Code to execute after the delay

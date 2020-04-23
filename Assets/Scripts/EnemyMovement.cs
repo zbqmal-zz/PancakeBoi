@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SlimeEnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     private NavMeshAgent _nav;
     private Transform _player;
@@ -24,7 +24,7 @@ public class SlimeEnemyMovement : MonoBehaviour
         initialRotation = transform.rotation;
         destination = initialPos;
 
-        health = this.GetComponent<SlimeEnemyAttack>().getHealth();
+        health = this.GetComponent<EnemyAttack>().getHealth();
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class SlimeEnemyMovement : MonoBehaviour
     {
         // Debug.Log(destination == _player.position);
         _nav.SetDestination(destination);
-        health = this.GetComponent<SlimeEnemyAttack>().getHealth();
+        health = this.GetComponent<EnemyAttack>().getHealth();
         if(health > 1) 
         { 
             _nav.isStopped = false;
@@ -60,11 +60,6 @@ public class SlimeEnemyMovement : MonoBehaviour
             _nav.isStopped = true;
             Debug.Log("Stopped nav agent");
         } 
-        // else if(health > 1)
-        // {
-        //     _nav.isStopped = false;
-        //     Debug.Log("Nav agent resumed");
-        // }
 
     }
 }
