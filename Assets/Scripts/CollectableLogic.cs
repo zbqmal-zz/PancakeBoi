@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class CollectableLogic : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject PanCam;
+    public GameObject PlayerCam;
+    GameObject player;
+    private bool pancutsceneplayed;
     public int collectableCount;
     private int collectableTotal;
     public int levelNumber;
@@ -39,6 +43,9 @@ public class CollectableLogic : MonoBehaviour
         collectableCount = 0;
         pan = GameObject.FindGameObjectWithTag("Pan");
         pantriggers = GameObject.FindGameObjectsWithTag("Pan Trigger");
+        player = GameObject.FindWithTag("Player");
+        //boolean made to make the camera that shows the pan only play once
+        pancutsceneplayed = false;
         if(pan != null){
             pan.SetActive(false);
         }
@@ -103,7 +110,7 @@ public class CollectableLogic : MonoBehaviour
             Debug.Log("Must set collectable total for level");
         }
     }
-
+    
     // Update is called once per frame
     void OnTriggerEnter(Collider collider)
     {
@@ -217,15 +224,26 @@ public class CollectableLogic : MonoBehaviour
                 break;
         }
     }
+    //Set the pan active if all ingredients were collected and trigger the Pan Camera routine
     void Update(){
         //Debug.Log(ingredientsCollected.Count);
-        if(ingredientsCollected.Count == collectableTotal){
+        if(ingredientsCollected.Count == collectableTotal && !pancutsceneplayed){
             //Debug.Log(collectableCount);
             pan.SetActive(true);
             for (int i = 0; i<pantriggers.Length; i++){
                 pantriggers[i].SetActive(true);
+                PanCam.SetActive(true);
+                player.GetComponent<PancakBoiControl>().enabled = false;
+                StartCoroutine(ShowPan());
             }
         }
+    }
+    IEnumerator ShowPan(){
+        yield return new WaitForSeconds(3);
+        PanCam.SetActive(false);
+        PlayerCam.SetActive(true);
+        player.GetComponent<PancakBoiControl>().enabled = true;
+        pancutsceneplayed = true;
     }
     void AddCollectedIngredient(Text ingredient){
         bool dup = false;
