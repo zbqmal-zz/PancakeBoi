@@ -23,6 +23,7 @@ public class PancakBoiControl : MonoBehaviour
     public Vector3 pos = Vector3.zero;
     public bool resetPos = false;
 
+    public GameObject projectile;
 
     void Start()
     {
@@ -107,6 +108,16 @@ public class PancakBoiControl : MonoBehaviour
 
 
         this.transform.rotation = Quaternion.Euler(0f, rot, 0f);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+         {
+             GameObject bullet = Instantiate(projectile, transform.position + 1.0f * transform.forward, transform.rotation) as GameObject;
+             bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 50.0f);
+             bullet.GetComponent<Rigidbody>().velocity = transform.TransformDirection (new Vector3(0, 0, 30));
+
+            //  yield WaitForSeconds(4.0f);
+             Destroy(bullet, 4.0f);
+         }
     }
 
     void LateUpdate() {
