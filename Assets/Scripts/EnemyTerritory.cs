@@ -14,7 +14,6 @@ public class EnemyTerritory : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
         navDestination = enemy.GetComponent<EnemyMovement>();
         inTerritory = false;
         _animator = enemy.GetComponent<Animator>();
