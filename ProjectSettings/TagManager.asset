@@ -14,6 +14,9 @@ TagManager:
   - Item_3_img
   - Pan
   - Pan Trigger
+  - FallingPlatform
+  - MovingPlatform
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -25,8 +28,8 @@ TagManager:
   - 
   - Platform
   - Wall
-  - 
-  - 
+  - Projectile
+  - Player
   - 
   - 
   - 

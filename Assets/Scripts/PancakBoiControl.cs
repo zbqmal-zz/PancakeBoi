@@ -6,12 +6,14 @@ public class PancakBoiControl : MonoBehaviour
 {
     private CharacterController cc; 
     private Animator anim;
+    private CapsuleCollider collider;
     public GameObject cam;
 
     public float jumpHeight;
     public float midAirVelocity;
     public float jumpFloatness;
     public float fallSpeedMultiplier;
+    public float speedMultiplier;
 
     private float oldRot = 0f;
     public bool isGrounded = true;
@@ -19,6 +21,24 @@ public class PancakBoiControl : MonoBehaviour
     private bool falling  = false;
     private float safetyTime = 0f;
     private bool safetyKeep = false;
+    private bool onPlatform = false;
+    private GameObject MovingPlatform;
+    private Vector3 oldPlatformPos;
+
+    private GameObject handPosition;
+    private Rigidbody butterProjectile;
+    private Rigidbody thisProjectile;
+    public float projectileForce;
+    private RectTransform fillBar;
+    private bool recharging = false;
+    private float readyTime;
+    public float rechargeTime = 5f;
+    private Vector2 startAnchorLeft;
+    private Vector2 endAnchorLeft;
+    private Vector2 startAnchorRight;
+    private Vector2 endAnchorRight;
+
+
     public Vector3 vel = Vector3.zero;
     public Vector3 pos = Vector3.zero;
     public bool resetPos = false;
@@ -26,8 +46,18 @@ public class PancakBoiControl : MonoBehaviour
 
     void Start()
     {
-        cc = this.GetComponent(typeof(CharacterController)) as CharacterController;
-        anim = this.GetComponent(typeof(Animator)) as Animator;
+        cc = this.GetComponent<CharacterController>();
+        anim = this.GetComponent<Animator>();
+        collider = this.GetComponent<CapsuleCollider>();
+        handPosition = GameObject.Find("Hand.l_end");
+        GameObject butter = GameObject.Find("butterProjectile");
+        butterProjectile = butter.GetComponent<Rigidbody>();
+        butter.SetActive(false);
+        fillBar = GameObject.Find("FillBar").GetComponent<RectTransform>();
+        startAnchorLeft = new Vector2(0.026f, 0);
+        endAnchorLeft = Vector2.zero;
+        startAnchorRight = new Vector2(0.045f,0.12f);
+        endAnchorRight = new Vector2(0.3f, 0.12f);
     }
 
     // Update is called once per frame
@@ -93,25 +123,45 @@ public class PancakBoiControl : MonoBehaviour
             anim.SetBool("midJump", true);
         }
 
-        if ((falling || midJump) && (facing.x != 0f || facing.y != 0f)) {
+        if (facing.x != 0f || facing.y != 0f) {
             Vector3 forward = this.transform.forward;
-            forward *= midAirVelocity;
-            vel.x = forward.x;
-            vel.z = forward.z;
-        } else {
-            vel.x = 0f;
-            vel.z = 0f;
+            if (falling || midJump) {
+                forward *= midAirVelocity;
+                vel.x += forward.x;
+                vel.z += forward.z;
+            } else {
+                vel.x += forward.x * speedMultiplier;
+                vel.z += forward.z * speedMultiplier;
+            }
         }
 
         anim.SetFloat("fallSpeed", vel.y);
 
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1") && !recharging) {
             anim.SetBool("Throw", true);
         }
         
 
 
         this.transform.rotation = Quaternion.Euler(0f, rot, 0f);
+
+        if (onPlatform) {
+            if ((MovingPlatform.transform.position - oldPlatformPos).magnitude < 10) {
+                vel.x += (MovingPlatform.transform.position.x - oldPlatformPos.x) / Time.deltaTime;
+                vel.z += (MovingPlatform.transform.position.z - oldPlatformPos.z) / Time.deltaTime;
+            }
+            oldPlatformPos = MovingPlatform.transform.position;
+            
+        }
+
+        if (recharging) {
+            fillBar.anchorMin = Vector2.Lerp(startAnchorLeft,endAnchorLeft, readyTime/rechargeTime);
+            fillBar.anchorMax = Vector2.Lerp(startAnchorRight,endAnchorRight, readyTime/rechargeTime);
+            if (readyTime >= rechargeTime) {
+                recharging = false;
+            }
+            readyTime += Time.deltaTime;
+        }
     }
 
     void LateUpdate() {
@@ -129,11 +179,41 @@ public class PancakBoiControl : MonoBehaviour
         } else {
             cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
         }
+        vel.x = 0f;
+        vel.z = 0f;
 
         // if (falling || midJump)
         //     cc.Move(new Vector3(vel.x*Time.deltaTime, (vel.y-cc.velocity.y)*Time.deltaTime, vel.z*Time.deltaTime));
         // else
         //     cc.Move(new Vector3(0f, (vel.y-cc.velocity.y)*Time.deltaTime, 0f));
+    }
+
+
+
+    void OnCollisionEnter(Collision c) {
+        if(c.gameObject.CompareTag("MovingPlatform")) {
+            MovingPlatform = c.gameObject;
+            onPlatform = true;
+        }
+    }
+
+    void OnCollisionExit(Collision c) {
+        if(c.gameObject.CompareTag("MovingPlatform")) {
+            MovingPlatform = null;
+            onPlatform = false;
+            oldPlatformPos = Vector3.down * -40;
+        }
+    } 
+
+    public void ThrowButter() {
+        thisProjectile = Instantiate<Rigidbody>(butterProjectile, handPosition.transform);
+        this.thisProjectile.gameObject.SetActive(true);
+        thisProjectile.isKinematic = false;
+        thisProjectile.gameObject.transform.parent = null;
+        thisProjectile.AddForce(Vector3.up*80 + this.transform.forward*projectileForce);
+        thisProjectile.AddTorque(Random.onUnitSphere*20);
+        recharging = true;
+        readyTime = 0f;
     }
 
 }

@@ -15933,7 +15933,7 @@ GameObject:
   - component: {fileID: 4966652637374592282}
   m_Layer: 0
   m_Name: Cracker Platform
-  m_TagString: Untagged
+  m_TagString: FallingPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
