@@ -87,6 +87,12 @@ EditorBuildSettings:
     path: Assets/RPG Monster Duo PBR Polyart/Scenes/DuoScene.unity
     guid: f7b7e81352960c44f823fb500723f0c1
   - enabled: 1
+    path: Assets/Scenes/CactusEnemySetup.unity
+    guid: 0b2cdd1b7cfcb4ad5b7b5c4515fda845
+  - enabled: 1
+    path: Assets/Scenes/EggyEnemySetup.unity
+    guid: 3d10b2bc1b0434199baeaa89af34efa9
+  - enabled: 1
     path: Assets/Scenes/EnemyTest.unity
     guid: aeb7a218f7400e04ab42f0d026010933
   - enabled: 1
