@@ -58,7 +58,7 @@ public class Patrol : MonoBehaviour
             break;
             case(AIState.PursuePlayer):
                 if(!isTriggered) {
-                    destPoint--;
+                    // destPoint--;
                     aiState = AIState.PatrolIngredient;
                 } else {
                     Debug.Log("Going Towards Player");

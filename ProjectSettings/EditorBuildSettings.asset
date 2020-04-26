@@ -96,6 +96,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EnemyTest.unity
     guid: aeb7a218f7400e04ab42f0d026010933
   - enabled: 1
+    path: Assets/Scenes/FoodEnemiesSetup.unity
+    guid: 29550bb81bf8b4454bb545d6e0651c56
+  - enabled: 1
     path: Assets/Scenes/Ingredients.unity
     guid: d35b561a895108f4784b6834c21a8106
   - enabled: 1
