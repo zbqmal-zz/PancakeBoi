@@ -676,6 +676,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5514828946476283492, guid: 1cffaf9e1ed27444a803e57efcf15bb0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7062077360540326689, guid: 1cffaf9e1ed27444a803e57efcf15bb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -779,7 +784,7 @@ PrefabInstance:
     - target: {fileID: 7347400735721302537, guid: 1cffaf9e1ed27444a803e57efcf15bb0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7347400735721302537, guid: 1cffaf9e1ed27444a803e57efcf15bb0,
         type: 3}
@@ -2497,7 +2502,7 @@ PrefabInstance:
     - target: {fileID: 6519484369107618888, guid: ad68ae3842d2440c3b09a285b487a5aa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -15.9
       objectReference: {fileID: 0}
     - target: {fileID: 6519484369107618888, guid: ad68ae3842d2440c3b09a285b487a5aa,
         type: 3}
@@ -2543,6 +2548,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cactus Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519484369107618891, guid: ad68ae3842d2440c3b09a285b487a5aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad68ae3842d2440c3b09a285b487a5aa, type: 3}

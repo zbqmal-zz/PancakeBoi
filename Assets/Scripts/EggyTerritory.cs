@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTerritory : MonoBehaviour
+public class EggyTerritory : MonoBehaviour
 {
     public GameObject enemy;
     EnemyMovement navDestination;
     private GameObject _player;
     public bool inTerritory;
-    Animator _animator;
-    
     // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
         navDestination = enemy.GetComponent<EnemyMovement>();
         inTerritory = false;
-        _animator = enemy.GetComponent<Animator>();
     }
 
+    // Update is called once per frame
     void Update()
     {
         if(inTerritory)
@@ -29,7 +27,6 @@ public class EnemyTerritory : MonoBehaviour
         {
             navDestination.ResetDestination();
         }
-
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,7 +35,6 @@ public class EnemyTerritory : MonoBehaviour
         {
             // navDestination.destination = _player.transform.position;
             inTerritory = true;
-            _animator.SetBool("IsInTerritory", true);
         }
     }
 
@@ -48,7 +44,6 @@ public class EnemyTerritory : MonoBehaviour
         {
             // navDestination.ResetDestination();
             inTerritory = false;
-            _animator.SetBool("IsInTerritory", false);
         }
     }
 }
