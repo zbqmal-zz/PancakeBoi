@@ -9433,6 +9433,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7347400735721302537, guid: 1cffaf9e1ed27444a803e57efcf15bb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cffaf9e1ed27444a803e57efcf15bb0, type: 3}
 --- !u!1 &789122816
@@ -15121,6 +15126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7347400735721302537, guid: 1cffaf9e1ed27444a803e57efcf15bb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cffaf9e1ed27444a803e57efcf15bb0, type: 3}
 --- !u!4 &1279631217 stripped
@@ -19696,6 +19706,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7347400735721302537, guid: 1cffaf9e1ed27444a803e57efcf15bb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cffaf9e1ed27444a803e57efcf15bb0, type: 3}
 --- !u!4 &1615280565 stripped
@@ -22030,6 +22045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Turtle Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156349889913413164, guid: 1fa2d5544999248759d77c54da7070f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5156349889913413165, guid: 1fa2d5544999248759d77c54da7070f4,
         type: 3}

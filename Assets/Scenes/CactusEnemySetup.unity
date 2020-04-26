@@ -2274,6 +2274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanCam: {fileID: 0}
+  PlayerCam: {fileID: 0}
   collectableCount: 0
   levelNumber: 4
   ingredientsCollected: []
@@ -2415,7 +2417,7 @@ PrefabInstance:
     - target: {fileID: 5156349889913413164, guid: 1fa2d5544999248759d77c54da7070f4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5156349889913413165, guid: 1fa2d5544999248759d77c54da7070f4,
         type: 3}
