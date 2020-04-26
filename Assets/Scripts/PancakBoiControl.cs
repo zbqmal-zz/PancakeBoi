@@ -7,6 +7,7 @@ public class PancakBoiControl : MonoBehaviour
     private CharacterController cc; 
     private Animator anim;
     private CapsuleCollider collider;
+    private AudioSource audio;
     public GameObject cam;
 
     public float jumpHeight;
@@ -14,6 +15,10 @@ public class PancakBoiControl : MonoBehaviour
     public float jumpFloatness;
     public float fallSpeedMultiplier;
     public float speedMultiplier;
+    public AudioClip step;
+    public AudioClip jump;
+    public AudioClip hit;
+    public AudioClip shoot;
 
     private float oldRot = 0f;
     public bool isGrounded = true;
@@ -49,15 +54,16 @@ public class PancakBoiControl : MonoBehaviour
         cc = this.GetComponent<CharacterController>();
         anim = this.GetComponent<Animator>();
         collider = this.GetComponent<CapsuleCollider>();
+        audio = this.GetComponent<AudioSource>();
         handPosition = GameObject.Find("Hand.l_end");
         GameObject butter = GameObject.Find("butterProjectile");
         butterProjectile = butter.GetComponent<Rigidbody>();
         butter.SetActive(false);
         fillBar = GameObject.Find("FillBar").GetComponent<RectTransform>();
-        startAnchorLeft = new Vector2(0.026f, 0);
+        startAnchorLeft = new Vector2(0.08f, 0.1f);
         endAnchorLeft = Vector2.zero;
-        startAnchorRight = new Vector2(0.045f,0.12f);
-        endAnchorRight = new Vector2(0.3f, 0.12f);
+        startAnchorRight = new Vector2(0.15f,0.9f);
+        endAnchorRight = new Vector2(1f, 1f);
     }
 
     // Update is called once per frame
@@ -214,6 +220,19 @@ public class PancakBoiControl : MonoBehaviour
         thisProjectile.AddTorque(Random.onUnitSphere*20);
         recharging = true;
         readyTime = 0f;
+        audio.PlayOneShot(shoot);
+    }
+
+    public void StepSound() {
+        audio.PlayOneShot(step);
+    }
+
+    public void JumpSound() {
+        audio.PlayOneShot(jump);
+    }
+
+    public void HitSound() {
+        audio.PlayOneShot(hit);
     }
 
 }

@@ -24,7 +24,7 @@ public class EnemyProjectileEffect : MonoBehaviour
         navMeshAgent = this.gameObject.GetComponent<NavMeshAgent>();
         aI = this.gameObject.GetComponent<SlimeAI>();
         collider = this.gameObject.GetComponent<Collider>();
-        butter = GameObject.Find("butter");
+        butter = GameObject.Find("butterDebuff");
         originalPos = this.gameObject.transform.position;
     }
 
@@ -69,11 +69,10 @@ public class EnemyProjectileEffect : MonoBehaviour
     }
     void OnCollisionEnter(Collision c) {
         if (c.gameObject.CompareTag("Projectile")) {
-            Debug.Log(butter);
             navMeshAgent.enabled = false;
             aI.enabled = false;
             if (c.rigidbody.velocity.magnitude < 0.5f) {
-                Vector3 push = rigidbody.velocity*force*30;
+                Vector3 push = navMeshAgent.desiredVelocity*force;
                 push.y = 0f;
                 rigidbody.AddForce(push);
             } else {

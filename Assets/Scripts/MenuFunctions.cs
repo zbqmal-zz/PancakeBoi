@@ -15,6 +15,8 @@ public class MenuFunctions : MonoBehaviour
     }
 
     public void adjustMouseSpeed(float m) {
-        camera.speedMult = m;
+        if (camera != null) {
+            camera.speedMult = m;
+        }
     }
 }
