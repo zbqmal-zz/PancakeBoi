@@ -11,17 +11,10 @@ public class EggyMovement : MonoBehaviour
     public float speed;
     public float width;
 
-    public enum AIState
-    {
-        CircleEgg,
-        PursuePlayer
-    };
-
     // Start is called before the first frame update
     void Start()
     {
-        // speed = 2;
-        // width = 3;
+        
     }
 
     // Update is called once per frame
@@ -33,6 +26,7 @@ public class EggyMovement : MonoBehaviour
         float y = 0.25f;
         float z = Mathf.Sin(timeCounter)*width;
 
-        transform.position = new Vector3(x, y,z);
+        transform.position = new Vector3(x, y, z);
+        transform.right = new Vector3(x, 0, z);
     }
 }
