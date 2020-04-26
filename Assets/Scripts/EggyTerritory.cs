@@ -5,27 +5,30 @@ using UnityEngine;
 public class EggyTerritory : MonoBehaviour
 {
     public GameObject enemy;
-    EnemyMovement navDestination;
+    Patrol navDestination;
     private GameObject _player;
     public bool inTerritory;
     // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        navDestination = enemy.GetComponent<EnemyMovement>();
+        navDestination = enemy.GetComponent<Patrol>();
         inTerritory = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Debug.Log("Eggy Territory's isTriggered: " + inTerritory);
         if(inTerritory)
         {
             // Debug.Log("We in dere");
-            navDestination.changeDestination(_player.transform.position);
+            // navDestination.changeDestination(_player.transform.position);
+            navDestination.isTriggered = true;
         } else 
         {
-            navDestination.ResetDestination();
+            // navDestination.ResetDestination();
+            navDestination.isTriggered = false;
         }
     }
 
@@ -33,7 +36,6 @@ public class EggyTerritory : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
-            // navDestination.destination = _player.transform.position;
             inTerritory = true;
         }
     }
@@ -42,8 +44,9 @@ public class EggyTerritory : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
-            // navDestination.ResetDestination();
             inTerritory = false;
         }
     }
+
+    public Vector3 getTargetPos() { return _player.transform.position; }
 }
