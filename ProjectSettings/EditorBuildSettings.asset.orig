@@ -87,22 +87,28 @@ EditorBuildSettings:
     path: Assets/RPG Monster Duo PBR Polyart/Scenes/DuoScene.unity
     guid: f7b7e81352960c44f823fb500723f0c1
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/Menu_Scene.unity
-    guid: a7820c95585eb4398ac5606a0997a383
-=======
     path: Assets/Scenes/CactusEnemySetup.unity
     guid: 0b2cdd1b7cfcb4ad5b7b5c4515fda845
+  - enabled: 1
+    path: Assets/Scenes/EggyEnemySetup.unity
+    guid: 3d10b2bc1b0434199baeaa89af34efa9
   - enabled: 1
     path: Assets/Scenes/EnemyTest.unity
     guid: aeb7a218f7400e04ab42f0d026010933
   - enabled: 1
-    path: Assets/Scenes/Ingredients.unity
-    guid: d35b561a895108f4784b6834c21a8106
->>>>>>> enemy_fixes
-  - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Level_1_Scene.unity
     guid: a4e64b74176d44434a3ca5ef2e61c37b
+=======
+    path: Assets/Scenes/FoodEnemiesSetup.unity
+    guid: 29550bb81bf8b4454bb545d6e0651c56
+  - enabled: 1
+    path: Assets/Scenes/Ingredients.unity
+    guid: d35b561a895108f4784b6834c21a8106
+  - enabled: 1
+    path: Assets/Scenes/Joon_Scene.unity
+    guid: 6c36e585060b44f209a74e2cb28d21f6
+>>>>>>> enemy_fixes
   - enabled: 1
     path: Assets/Scenes/Level2_French_Toast.unity
     guid: 1bba651752e237540abd6aace676d671
@@ -130,7 +136,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MapWithEnemies.unity
     guid: 4b6f42e86b7583f46b5b4b5380e20396
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Menu_Scene.unity
+    guid: a7820c95585eb4398ac5606a0997a383
+  - enabled: 1
     path: Assets/Scenes/Player.unity
     guid: 4ad4fcc48baff7643852c06f97b3c461
   - enabled: 1
