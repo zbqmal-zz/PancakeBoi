@@ -42,7 +42,7 @@ public class EnemyProjectileEffect : MonoBehaviour
             GameObject.Destroy(thisButter);
             restoring = false;
         }
-        if ((this.transform.position.z < -50 ) && !restoring) {
+        if ((this.transform.position.y < -50 ) && !restoring) {
             restoring = true;
             if (aI != null)aI.enabled = false;
             if (patrol != null) patrol.enabled = false;

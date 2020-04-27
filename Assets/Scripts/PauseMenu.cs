@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     private GameObject pauseMenu;
-    private CameraController camera;
+    private CameraController cam;
     private float cameraSpeedH;
     private float cameraSpeedV;
 
@@ -17,9 +17,9 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu = GameObject.Find("Menu");
         pauseMenu.SetActive(false);
-        camera = GameObject.Find("Main Camera").GetComponent<CameraController>();
-        cameraSpeedH = camera.cameraSpeedH;
-        cameraSpeedV = camera.cameraSpeedV;
+        cam = GameObject.Find("Main Camera").GetComponent<CameraController>();
+        cameraSpeedH = cam.cameraSpeedH;
+        cameraSpeedV = cam.cameraSpeedV;
     }
 
     // Update is called once per frame
@@ -28,13 +28,13 @@ public class PauseMenu : MonoBehaviour
             if(!pauseMenu.activeSelf) {
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0f;
-                camera.cameraSpeedH = 0f;
-                camera.cameraSpeedV = 0f;
+                cam.cameraSpeedH = 0f;
+                cam.cameraSpeedV = 0f;
             } else {
                 pauseMenu.SetActive(false);
                 Time.timeScale = 1f;
-                camera.cameraSpeedH = cameraSpeedH;
-                camera.cameraSpeedV = cameraSpeedV;
+                cam.cameraSpeedH = cameraSpeedH;
+                cam.cameraSpeedV = cameraSpeedV;
             }
         }
     }

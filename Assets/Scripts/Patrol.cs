@@ -53,7 +53,7 @@ public class Patrol : MonoBehaviour
                     aiState = AIState.PursuePlayer; 
                 }
                 else {
-                    if (agent.enabled && !agent.pathPending && agent.remainingDistance < 0.5f) { GotoNextPoint(); }
+                    if (agent.enabled && agent.isOnNavMesh && !agent.pathPending && agent.remainingDistance < 0.5f) { GotoNextPoint(); }
                 }
             break;
             case(AIState.PursuePlayer):
