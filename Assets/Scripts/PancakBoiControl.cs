@@ -9,6 +9,7 @@ public class PancakBoiControl : MonoBehaviour
     private CapsuleCollider collider;
     private AudioSource audio;
     public GameObject cam;
+    public GameObject menu;
 
     public float jumpHeight;
     public float midAirVelocity;
@@ -144,7 +145,7 @@ public class PancakBoiControl : MonoBehaviour
 
         anim.SetFloat("fallSpeed", vel.y);
 
-        if (Input.GetButtonDown("Fire1") && !recharging) {
+        if (Input.GetButtonDown("Fire1") && !recharging && !menu.activeSelf) {
             anim.SetBool("Throw", true);
         }
         
