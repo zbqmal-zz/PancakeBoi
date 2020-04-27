@@ -48,77 +48,6 @@ CapsuleCollider:
   m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0.05}
---- !u!114 &-9171315756768511925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9091456233103584134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7296af77b7f114b96f8ee65e3d12b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HUD: {fileID: 0}
-  health: 3
-  invulnPeriod: 2
-  lastSafePosition: {x: 0, y: 0, z: 0}
---- !u!114 &637510286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9091456233103584134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f606d99362c5749bea68a5129fa05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  jumpHeight: 10
-  midAirVelocity: 4
-  jumpFloatness: 1.2
-  fallSpeedMultiplier: 1.2
-  speedMultiplier: 0
-  step: {fileID: 8300000, guid: 5dff7149bc81ec245af11975d11e6244, type: 3}
-  jump: {fileID: 8300000, guid: 167f98e13ae6819469292e08bda37901, type: 3}
-  hit: {fileID: 8300000, guid: b6a41b71e88a1dd409138b5e0dff4bdc, type: 3}
-  shoot: {fileID: 8300000, guid: 624efe6eb1f86664bad039f0ee1b520f, type: 3}
-  isGrounded: 1
-  projectileForce: 0
-  rechargeTime: 5
-  vel: {x: 0, y: 0, z: 0}
-  pos: {x: 0, y: 0, z: 0}
-  resetPos: 0
---- !u!114 &348873677913702597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9091456233103584134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectableCount: 0
-  levelNumber: 0
-  ingredientsCollected: []
---- !u!114 &6394147900645376551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9091456233103584134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dba9f4d50eb52b3418ec0a072ad7f6fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &239036471804546260
 AudioSource:
   m_ObjectHideFlags: 0
@@ -215,6 +144,80 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-9171315756768511925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7296af77b7f114b96f8ee65e3d12b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
+  health: 3
+  invulnPeriod: 2
+  lastSafePosition: {x: 0, y: 0, z: 0}
+--- !u!114 &637510286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f606d99362c5749bea68a5129fa05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  jumpHeight: 12
+  midAirVelocity: 5
+  jumpFloatness: 0.8
+  fallSpeedMultiplier: 1.8
+  speedMultiplier: 2
+  step: {fileID: 8300000, guid: 5dff7149bc81ec245af11975d11e6244, type: 3}
+  jump: {fileID: 8300000, guid: 167f98e13ae6819469292e08bda37901, type: 3}
+  hit: {fileID: 8300000, guid: b6a41b71e88a1dd409138b5e0dff4bdc, type: 3}
+  shoot: {fileID: 8300000, guid: 624efe6eb1f86664bad039f0ee1b520f, type: 3}
+  isGrounded: 1
+  projectileForce: 550
+  rechargeTime: 2
+  vel: {x: 0, y: 0, z: 0}
+  pos: {x: 0, y: 0, z: 0}
+  resetPos: 0
+  projectile: {fileID: 0}
+--- !u!114 &348873677913702597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32ca9664bbeadc4f9e932a4ed398362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanCam: {fileID: 0}
+  PlayerCam: {fileID: 0}
+  collectableCount: 0
+  levelNumber: 0
+  ingredientsCollected: []
+--- !u!114 &6394147900645376551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091456233103584134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba9f4d50eb52b3418ec0a072ad7f6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &939768329032774287
 PrefabInstance:
   m_ObjectHideFlags: 0

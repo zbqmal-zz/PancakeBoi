@@ -14,9 +14,15 @@ public class MenuFunctions : MonoBehaviour
         SceneManager.LoadScene(this.gameObject.scene.ToString());
     }
 
-    public void adjustMouseSpeed(float m) {
+    public void adjustMouseSpeedH(float m) {
         if (camera != null) {
-            camera.speedMult = m;
+            camera.speedMultH = m;
+        }
+    }
+
+    public void adjustMouseSpeedV(float m) {
+        if (camera != null) {
+            camera.speedMultV = m;
         }
     }
 }

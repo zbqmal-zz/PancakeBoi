@@ -39,7 +39,7 @@ public class Patrol : MonoBehaviour
     {
         health = this.GetComponent<EnemyAttack>().getHealth();
         // isTriggered = this.GetComponent<EggyTerritory>().isTriggered;
-        if(health > 1) 
+        if(health > 1 && agent.enabled) 
         { 
             agent.isStopped = false;
         }
@@ -49,11 +49,11 @@ public class Patrol : MonoBehaviour
         switch(aiState) {
             case(AIState.PatrolIngredient):
                 if (isTriggered) {
-                    Debug.Log("Inside Territory");
+                    // Debug.Log("Inside Territory");
                     aiState = AIState.PursuePlayer; 
                 }
                 else {
-                    if (!agent.pathPending && agent.remainingDistance < 0.5f) { GotoNextPoint(); }
+                    if (agent.enabled && !agent.pathPending && agent.remainingDistance < 0.5f) { GotoNextPoint(); }
                 }
             break;
             case(AIState.PursuePlayer):
@@ -61,9 +61,9 @@ public class Patrol : MonoBehaviour
                     // destPoint--;
                     aiState = AIState.PatrolIngredient;
                 } else {
-                    Debug.Log("Going Towards Player");
+                    // Debug.Log("Going Towards Player");
                     Vector3 target = territory.getTargetPos();
-                    agent.SetDestination(target);
+                    if(agent.enabled)agent.SetDestination(target);
                 }
             break;
         }
@@ -75,7 +75,7 @@ public class Patrol : MonoBehaviour
             return;
 
         // Set the agent to go to the currently selected destination.
-        agent.destination = waypoints[destPoint].position;
+        if(agent.enabled)agent.destination = waypoints[destPoint].position;
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
@@ -86,12 +86,12 @@ public class Patrol : MonoBehaviour
     {
         foreach (ContactPoint contact in collision.contacts)
         {
-            Debug.DrawRay(contact.point, contact.normal, Color.white);
+            // Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
-        if(collision.gameObject.CompareTag("Projectile") && health == 1)
+        if(collision.gameObject.CompareTag("Projectile") && health == 1 && agent.enabled)
         {
             agent.isStopped = true;
-            Debug.Log("Stopped nav agent");
+            // Debug.Log("Stopped nav agent");
         } 
 
     }

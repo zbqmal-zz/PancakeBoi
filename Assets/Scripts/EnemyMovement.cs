@@ -31,9 +31,11 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         // Debug.Log(destination == _player.position);
-        _nav.SetDestination(destination);
+        if (_nav.enabled) {
+            _nav.SetDestination(destination);
+        }
         health = this.GetComponent<EnemyAttack>().getHealth();
-        if(health > 1) 
+        if(health > 1 && _nav.enabled) 
         { 
             _nav.isStopped = false;
         }
@@ -55,7 +57,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
-        if(collision.gameObject.CompareTag("Projectile") && health == 1)
+        if(collision.gameObject.CompareTag("Projectile") && health == 1 && _nav.enabled)
         {
             _nav.isStopped = true;
             Debug.Log("Stopped nav agent");
