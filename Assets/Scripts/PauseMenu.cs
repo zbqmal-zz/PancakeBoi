@@ -20,17 +20,20 @@ public class PauseMenu : MonoBehaviour
         cam = GameObject.Find("Main Camera").GetComponent<CameraController>();
         cameraSpeedH = cam.cameraSpeedH;
         cameraSpeedV = cam.cameraSpeedV;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.O)) {
             if(!pauseMenu.activeSelf) {
+                Cursor.visible = true;
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0f;
                 cam.cameraSpeedH = 0f;
                 cam.cameraSpeedV = 0f;
             } else {
+                Cursor.visible = false;
                 pauseMenu.SetActive(false);
                 Time.timeScale = 1f;
                 cam.cameraSpeedH = cameraSpeedH;
