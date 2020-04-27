@@ -11,7 +11,7 @@ public class MenuFunctions : MonoBehaviour
     }
 
     public void QuitGame() {
-        SceneManager.LoadScene(this.gameObject.scene.ToString());
+        Application.Quit();
     }
 
     public void adjustMouseSpeedH(float m) {
