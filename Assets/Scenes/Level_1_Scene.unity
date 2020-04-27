@@ -982,6 +982,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 92500771}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &98454567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9119878869196640753, guid: 4049a15867b0e2c43a69136874e555a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 212492277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &100893673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16053,6 +16059,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1042843226}
+    - target: {fileID: 637510286, guid: b6b2785cc46291e42990174ef4394cc1, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 98454567}
     - target: {fileID: 2691276215940173, guid: b6b2785cc46291e42990174ef4394cc1, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.35897344
