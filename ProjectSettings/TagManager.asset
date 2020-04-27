@@ -16,6 +16,9 @@ TagManager:
   - Pan Trigger
   - Projectile
   - Slime Enemy
+  - FallingPlatform
+  - MovingPlatform
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -29,6 +32,8 @@ TagManager:
   - Wall
   - Pan
   - 
+  - Projectile
+  - Player
   - 
   - 
   - 

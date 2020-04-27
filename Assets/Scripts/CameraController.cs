@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class CameraController : MonoBehaviour
 {
     
     public GameObject target;
-    public float cameraSpeedH = 0.3f;
-    public float cameraSpeedV = 0.3f;
+    public float cameraSpeedH = 0.07f;
+    public float cameraSpeedV = 0.1f;
     public float cameraLowest = 0f;
     public float cameraHighest = 1f;
-    public float rotationDelta;
     public float heightOffset;
+    public float speedMult = 1f;
     private Vector3 offset;
     private float radius;
 
@@ -20,10 +21,8 @@ public class CameraController : MonoBehaviour
     }
 
     public void Update() {
-        float angleY = -cameraSpeedH*Input.GetAxis("Mouse X");
+        float angleY = -cameraSpeedH*Input.GetAxis("Mouse X")*speedMult;
         float angleX = cameraSpeedV*Input.GetAxis("Mouse Y");
-        // angleY = 0f;
-        // angleX = 0.5f*Time.deltaTime;
 
         float oldX = Mathf.Acos(offset.y/radius);
         float oldY = Mathf.Atan2(offset.x, -offset.z);
@@ -33,27 +32,32 @@ public class CameraController : MonoBehaviour
         offset.y = radius*Mathf.Cos(newX);
         offset.z = -radius*Mathf.Sin(newX)*Mathf.Cos(oldY+angleY);
 
-
-        // float newX = radius*Mathf.Cos(Mathf.Acos(offset.x/radius) + angle);
-        // float newZ = radius*Mathf.Cos(Mathf.Acos(offset.z/radius) + angle);
-
-        // float newX = offset.x*Mathf.Cos(angle) - offset.z*Mathf.Sin(angle);
-        // float newZ = offset.z*Mathf.Cos(angle) - offset.x*Mathf.Sin(angle);
-
-        // float newX = Mathf.Sin(angle + Mathf.Atan(offset.x/offset.z));
-        // float newZ = Mathf.Cos(angle + Mathf.Atan(offset.x/offset.z));
-
-        // float newX = Mathf.Sin(angleY)*(offset.z) + Mathf.Cos(angleY)*(offset.x);
-        // float newZ = Mathf.Cos(angleY)*(offset.z) - Mathf.Sin(angleY)*(offset.x);
-
-        // offset.x = newX;
-        // offset.z = newZ;
         this.transform.position = target.transform.position + heightOffset*Vector3.up + offset;
         // this.transform.position = target.transform.TransformPoint(offset);
     
         this.transform.LookAt(target.transform.position + heightOffset*Vector3.up);
+
+
+
+        RaycastHit[] rays = Physics.RaycastAll(this.transform.position, target.transform.position - transform.position, radius - 0.5f);
+
+
+    }
+    void OnTriggerEnter(Collider collider) {
+        if (!collider.gameObject.CompareTag("Player") && !collider.gameObject.CompareTag("Enemy") && !collider.gameObject.CompareTag("FallingPlatform")) {
+            Renderer[] ren = collider.gameObject.GetComponentsInChildren<Renderer>();
+            foreach (Renderer r in ren) {
+                r.enabled = false;
+            }
+        }
     }
 
+    void OnTriggerExit(Collider collider) {
+        Renderer[] ren = collider.gameObject.GetComponentsInChildren<Renderer>();
+        foreach (Renderer r in ren) {
+            r.enabled = true;
+        }
+    }
     
 
     

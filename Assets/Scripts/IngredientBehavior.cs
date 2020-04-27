@@ -32,7 +32,7 @@ public class IngredientBehavior : MonoBehaviour
         }
     }
     void OnTriggerEnter(Collider collision) {
-        Debug.Log("collding");
+        //Debug.Log("collding");
         if (collision.gameObject.CompareTag("Player")) {
             audio.Play();
             StartCoroutine(Deactivate());
