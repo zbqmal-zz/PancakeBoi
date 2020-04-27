@@ -19786,11 +19786,11 @@ GameObject:
   - component: {fileID: 1512300093}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1512300089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19804,8 +19804,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1913965455}
-  cameraSpeedH: 0.05
-  cameraSpeedV: 0.02
+  cameraSpeedH: 0.02
+  cameraSpeedV: 0.03
   cameraLowest: -10
   cameraHighest: 98
   heightOffset: 2
